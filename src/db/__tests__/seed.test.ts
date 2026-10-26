@@ -20,12 +20,12 @@ describe('seedIfEmpty', () => {
     expect(db.select().from(restaurants).all()).toHaveLength(before);
   });
 
-  it('inserts the nested dishes and ratings from the seed', async () => {
+  it('inserts the ratings and dish notes from the seed', async () => {
     const { db } = makeTestDb();
     await seedIfEmpty(db);
-    const totalDishes = lisbonSeed.reduce((s, r) => s + (r.dishes?.length ?? 0), 0);
     const totalRatings = lisbonSeed.reduce((s, r) => s + (r.ratings?.length ?? 0), 0);
-    expect(db.select().from(dishes).all()).toHaveLength(totalDishes);
+    const totalDishes = lisbonSeed.reduce((s, r) => s + (r.dish_notes ? 1 : 0), 0);
     expect(db.select().from(ratings).all()).toHaveLength(totalRatings);
+    expect(db.select().from(dishes).all()).toHaveLength(totalDishes);
   });
 });
