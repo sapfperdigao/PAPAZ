@@ -6,8 +6,8 @@ import { RestaurantCard } from '@/components/RestaurantCard';
 import { useRestaurants } from '@/hooks/useRestaurants';
 import { useUiStore } from '@/store/ui';
 import { useLocation } from '@/hooks/useLocation';
-import type { SortKey } from '@/db/repo';
-import type { Category } from '@/domain';
+import type { SortKey, VisitedFilter } from '@/db/repo';
+import type { Category, PriceRange } from '@/domain';
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: 'distance', label: 'Distance' },
@@ -17,6 +17,12 @@ const SORTS: { key: SortKey; label: string }[] = [
 ];
 
 const CATEGORIES: Category[] = ['tasca', 'cervejaria', 'marisqueira', 'other'];
+const PRICES: PriceRange[] = ['€', '€€', '€€€', '€€€€'];
+const VISITED: { key: VisitedFilter; label: string }[] = [
+  { key: 'all', label: 'All' },
+  { key: 'visited', label: 'Visited' },
+  { key: 'unvisited', label: 'Unvisited' },
+];
 
 function Chip({
   label,
@@ -55,13 +61,20 @@ export default function ListScreen() {
     if (sort === 'distance' && location.status === 'undetermined') {
       void location.request();
     }
-  }, [sort, location]);
+  }, [sort, location.status, location.request]);
 
   const toggleCategory = (c: Category) => {
     const next = filters.categories.includes(c)
       ? filters.categories.filter((x) => x !== c)
       : [...filters.categories, c];
     setFilters({ categories: next });
+  };
+
+  const togglePrice = (p: PriceRange) => {
+    const next = filters.prices.includes(p)
+      ? filters.prices.filter((x) => x !== p)
+      : [...filters.prices, p];
+    setFilters({ prices: next });
   };
 
   return (
@@ -96,6 +109,28 @@ export default function ListScreen() {
             onPress={() => setFilters({ bookmarkedOnly: !filters.bookmarkedOnly })}
           />
         </View>
+
+        <View className="mt-2 flex-row flex-wrap gap-2">
+          {PRICES.map((p) => (
+            <Chip
+              key={p}
+              label={p}
+              active={filters.prices.includes(p)}
+              onPress={() => togglePrice(p)}
+            />
+          ))}
+        </View>
+
+        <View className="mt-2 flex-row flex-wrap gap-2">
+          {VISITED.map((v) => (
+            <Chip
+              key={v.key}
+              label={v.label}
+              active={filters.visited === v.key}
+              onPress={() => setFilters({ visited: v.key })}
+            />
+          ))}
+        </View>
       </View>
 
       <FlatList
@@ -103,7 +138,12 @@ export default function ListScreen() {
         data={items}
         keyExtractor={(r) => r.id}
         renderItem={({ item }) => (
-          <RestaurantCard item={item} onPress={() => router.push(`/restaurant/${item.id}`)} />
+          <RestaurantCard
+            item={item}
+            onPress={() =>
+              router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
+            }
+          />
         )}
         ListEmptyComponent={
           <Text className="mt-10 text-center text-neutral-500">No restaurants yet.</Text>
