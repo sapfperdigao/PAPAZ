@@ -1,11 +1,11 @@
 import '../global.css';
-import { useEffect, useState } from 'react';
-import { Platform, Pressable, Text } from 'react-native';
+import { useEffect } from 'react';
+import { Pressable, Text } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Stack, useRouter } from 'expo-router';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@/query/client';
-import { getDb, initDb } from '@/db/client';
+import { getDb } from '@/db/client';
 import { seedIfEmpty } from '@/db/seed';
 
 function EditButton({ id }: { id?: string }) {
@@ -22,21 +22,15 @@ function EditButton({ id }: { id?: string }) {
 }
 
 export default function RootLayout() {
-  const [dbReady, setDbReady] = useState(Platform.OS !== 'web');
-
+  // Seed the built-in sample on first launch, then refresh any list queries.
+  // getDb() opens synchronously and applies pending migrations on first call.
   useEffect(() => {
-    initDb()
-      .then(() => {
-        setDbReady(true);
-        return seedIfEmpty(getDb());
-      })
+    seedIfEmpty(getDb())
       .then((n) => {
         if (n > 0) queryClient.invalidateQueries({ queryKey: ['restaurants'] });
       })
       .catch(() => {});
   }, []);
-
-  if (!dbReady) return null;
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

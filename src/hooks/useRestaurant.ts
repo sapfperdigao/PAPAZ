@@ -1,11 +1,25 @@
 import { useQuery } from '@tanstack/react-query';
 import { getDb } from '@/db/client';
-import { getRestaurant, getRatings, getDishes, getWines, getVisits } from '@/db/repo';
+import {
+  getRestaurant,
+  getRatings,
+  getDishes,
+  getWines,
+  getVisits,
+  getConsensus,
+} from '@/db/repo';
 
 export function useRestaurant(id: string) {
   return useQuery({
     queryKey: ['restaurant', id],
     queryFn: async () => getRestaurant(getDb(), id) ?? null,
+  });
+}
+
+export function useConsensus(id: string) {
+  return useQuery({
+    queryKey: ['consensus', id],
+    queryFn: async () => getConsensus(getDb(), id),
   });
 }
 

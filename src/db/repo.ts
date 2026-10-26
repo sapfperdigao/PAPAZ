@@ -3,6 +3,7 @@ import type { Category, PriceRange, RatingSource, WineType } from '@/domain';
 import { haversineKm, type LatLng } from '@/utils/haversine';
 import { normalizeScore } from '@/utils/normalizeRating';
 import { newId } from '@/utils/id';
+import { consensusScore, type EditorialSignals, type SourceInput } from '@/scoring/consensus';
 import type { MesaDb } from './types';
 import {
   restaurants,
@@ -27,7 +28,7 @@ const SOURCE_MAX: Record<RatingSource, number> = {
   reddit: 10,
 };
 
-export type SortKey = 'distance' | 'rating' | 'name' | 'zone';
+export type SortKey = 'distance' | 'rating' | 'name' | 'zone' | 'consensus';
 export type VisitedFilter = 'visited' | 'unvisited' | 'all';
 
 export interface ListOpts {
@@ -43,6 +44,10 @@ export interface ListOpts {
 export interface RestaurantListItem extends Restaurant {
   // Personal rating in STARS (0.5–5.0), null if unrated.
   personalRating: number | null;
+  // Blended multi-source consensus score (0–10), null if no ratings.
+  consensus: number | null;
+  // Consensus uncertainty band (±), null if no ratings.
+  consensusBand: number | null;
   // Straight-line km from origin, null if no origin or no coords.
   distanceKm: number | null;
 }
@@ -65,6 +70,25 @@ export interface CreateRestaurantInput {
 function personalStars(score: number | null): number | null {
   // Personal ratings are stored normalized (stars × 2); display as stars.
   return score == null ? null : score / 2;
+}
+
+function parseEditorial(json: string | null): EditorialSignals | undefined {
+  if (!json) return undefined;
+  try {
+    return JSON.parse(json) as EditorialSignals;
+  } catch {
+    return undefined;
+  }
+}
+
+// Build the consensus from a restaurant's own ratings rows + editorial. Each
+// stored ratings.score is already on a 0–10 axis, which is exactly the
+// consensus input. Returns null when there are no numeric ratings.
+function consensusFor(rows: Rating[], editorialJson: string | null) {
+  const sources: SourceInput[] = rows
+    .filter((rt) => rt.score != null)
+    .map((rt) => ({ source: rt.source, score: rt.score as number, reviewCount: rt.review_count ?? 0 }));
+  return consensusScore(sources, parseEditorial(editorialJson));
 }
 
 // FTS5 full-text search over name/zone/address. Tokenizes the query on
@@ -91,21 +115,31 @@ function searchIds(db: MesaDb, q: string): Set<string> | null {
 export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[] {
   const base = db.select().from(restaurants).all() as Restaurant[];
 
-  const personalRows = db
-    .select()
-    .from(ratings)
-    .where(eq(ratings.source, 'personal'))
-    .all() as Rating[];
-  const personalMap = new Map(personalRows.map((r) => [r.restaurant_id, r.score ?? null]));
+  // One pass over all ratings, grouped by restaurant — feeds both the personal
+  // star display and the consensus blend.
+  const allRatings = db.select().from(ratings).all() as Rating[];
+  const byRestaurant = new Map<string, Rating[]>();
+  for (const rt of allRatings) {
+    const list = byRestaurant.get(rt.restaurant_id);
+    if (list) list.push(rt);
+    else byRestaurant.set(rt.restaurant_id, [rt]);
+  }
 
-  let items: RestaurantListItem[] = base.map((r) => ({
-    ...r,
-    personalRating: personalStars(personalMap.get(r.id) ?? null),
-    distanceKm:
-      opts.origin && r.latitude != null && r.longitude != null
-        ? haversineKm(opts.origin, { lat: r.latitude, lng: r.longitude })
-        : null,
-  }));
+  let items: RestaurantListItem[] = base.map((r) => {
+    const rows = byRestaurant.get(r.id) ?? [];
+    const personal = rows.find((rt) => rt.source === 'personal');
+    const c = consensusFor(rows, r.editorial_json);
+    return {
+      ...r,
+      personalRating: personalStars(personal?.score ?? null),
+      consensus: c?.score ?? null,
+      consensusBand: c?.band ?? null,
+      distanceKm:
+        opts.origin && r.latitude != null && r.longitude != null
+          ? haversineKm(opts.origin, { lat: r.latitude, lng: r.longitude })
+          : null,
+    };
+  });
 
   if (opts.categories?.length) {
     items = items.filter((r) => opts.categories!.includes(r.category));
@@ -151,6 +185,14 @@ export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[
         return a.distanceKm - b.distanceKm;
       });
       break;
+    case 'consensus':
+      items.sort((a, b) => {
+        if (a.consensus == null && b.consensus == null) return byName(a, b);
+        if (a.consensus == null) return 1;
+        if (b.consensus == null) return -1;
+        return b.consensus - a.consensus || byName(a, b);
+      });
+      break;
   }
 
   return items;
@@ -176,6 +218,28 @@ export function getRestaurant(db: MesaDb, id: string): Restaurant | undefined {
   return db.select().from(restaurants).where(eq(restaurants.id, id)).get() as
     | Restaurant
     | undefined;
+}
+
+// Editorial signals (Michelin/Repsol/Time Out/…) stored as JSON on the
+// restaurant row; feeds the consensus editorial bonus.
+export function getEditorial(db: MesaDb, id: string): EditorialSignals | undefined {
+  return parseEditorial(getRestaurant(db, id)?.editorial_json ?? null);
+}
+
+export function setEditorial(db: MesaDb, id: string, signals: EditorialSignals): void {
+  db.update(restaurants)
+    .set({ editorial_json: JSON.stringify(signals) })
+    .where(eq(restaurants.id, id))
+    .run();
+}
+
+// Full consensus (score + band + counts) for one restaurant — for the detail
+// screen. Returns null when the restaurant has no numeric ratings.
+export function getConsensus(db: MesaDb, id: string) {
+  const r = getRestaurant(db, id);
+  if (!r) return null;
+  const rows = db.select().from(ratings).where(eq(ratings.restaurant_id, id)).all() as Rating[];
+  return consensusFor(rows, r.editorial_json);
 }
 
 export function createRestaurant(db: MesaDb, input: CreateRestaurantInput): string {

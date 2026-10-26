@@ -10,8 +10,9 @@ import type { SortKey, VisitedFilter } from '@/db/repo';
 import type { Category, PriceRange } from '@/domain';
 
 const SORTS: { key: SortKey; label: string }[] = [
+  { key: 'consensus', label: 'Consensus' },
   { key: 'distance', label: 'Distance' },
-  { key: 'rating', label: 'Rating' },
+  { key: 'rating', label: 'My rating' },
   { key: 'name', label: 'Name' },
   { key: 'zone', label: 'Zone' },
 ];
