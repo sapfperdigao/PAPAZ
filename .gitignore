@@ -1,0 +1,7 @@
+.superpowers/
+node_modules/
+.expo/
+.expo-export/
+dist/
+.env.local
+*.log
