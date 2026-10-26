@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Mesa",
+    "slug": "mesa",
+    "scheme": "mesa",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mesa.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Mesa uses your location to show which of your saved restaurants are closest."
+      }
+    },
+    "android": {
+      "package": "com.mesa.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Mesa uses your location to show which of your saved restaurants are closest."
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
