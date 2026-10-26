@@ -23,13 +23,18 @@ describe('listRestaurants consensus integration', () => {
 
   it('applies the editorial bonus from editorial_json', () => {
     const { db } = makeTestDb();
-    const id = repo.createRestaurant(db, { name: 'A', category: 'tasca' });
+    const base = repo.createRestaurant(db, { name: 'Base', category: 'tasca' });
+    repo.upsertManualScore(db, base, 'tripadvisor', 4.0, 12000);
+    const baseScore = repo.listRestaurants(db, { sort: 'name' }).find((r) => r.id === base)!
+      .consensus!;
+
+    const id = repo.createRestaurant(db, { name: 'Starred', category: 'tasca' });
     repo.upsertManualScore(db, id, 'tripadvisor', 4.0, 12000);
     repo.setEditorial(db, id, { michelinStars: 1 });
-
     const item = repo.listRestaurants(db, { sort: 'name' }).find((r) => r.id === id)!;
-    // 7.0 crowd + 0.4 Michelin star bonus.
-    expect(item.consensus!).toBeCloseTo(7.4, 1);
+
+    // Same crowd score + 0.4 for a Michelin star.
+    expect(item.consensus!).toBeCloseTo(baseScore + 0.4, 1);
   });
 
   it('sorts by consensus descending with unrated last', () => {

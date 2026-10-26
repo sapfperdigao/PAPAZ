@@ -9,17 +9,18 @@ describe('consensusScore', () => {
     { source: 'reddit', score: 7.5, reviewCount: 1 },
   ];
 
-  it('blends crowd sources to ~7.5 before editorial', () => {
+  it('blends crowd sources to ~7.0 before editorial (average for a good list)', () => {
     const c = consensusScore(sources);
     expect(c).not.toBeNull();
-    expect(c!.score).toBeCloseTo(7.5, 1);
+    expect(c!.score).toBeCloseTo(7.0, 1);
     expect(c!.sourceCount).toBe(4);
     expect(c!.totalReviews).toBe(19801);
   });
 
-  it('adds a capped editorial bonus for a Michelin Guide listing (→7.7)', () => {
+  it('adds a capped editorial bonus for a Michelin Guide listing (+0.25)', () => {
+    const base = consensusScore(sources)!.score;
     const c = consensusScore(sources, { inMichelinGuide: true });
-    expect(c!.score).toBeCloseTo(7.7, 1);
+    expect(c!.score).toBeCloseTo(base + 0.25, 1);
   });
 
   it('shrinks a 5.0-from-3-reviews score hard toward the prior (not a 10)', () => {

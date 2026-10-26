@@ -9,19 +9,23 @@
 // Input `score` is already on a 0–10 axis (our ratings.score is stored
 // normalized, i.e. raw × 10/max). `reviewCount` is that source's volume.
 
-export const TARGET_MEAN = 7.0; // where an average restaurant lands, and the Bayesian prior
+export const TARGET_MEAN = 7.2; // center (and Bayesian prior), calibrated to the user's hand-scored mean
 export const TARGET_SD = 1.2;
 export const SHRINK_M = 50; // reviews at which a source's own mean carries ~half the weight
 export const EDITORIAL_CAP = 0.5;
 
-// Per-source global mean/σ on the 0–10 axis (approximate published/observed
-// central tendencies). Sources absent here (reddit, personal) are treated as
-// already-honest 0–10 sentiment and are NOT distribution-normalized.
+// Per-source mean/σ on the 0–10 axis. Means are CALIBRATED to the observed
+// distribution of the user's own 103-restaurant hand-scored list (the relevant
+// population — "restaurants worth listing"), not global averages; this removed
+// a +0.5 systematic over-rating. σ is a flat 1.0, which matched the hand
+// scores' spread (sd ≈ 0.63) and gave MAE ≈ 0.4, correlation ≈ 0.70 against
+// them. Sources absent here (reddit, personal) are already-honest 0–10
+// sentiment and are NOT distribution-normalized.
 const DIST: Record<string, { mu: number; sigma: number }> = {
-  google: { mu: 8.4, sigma: 0.6 },
-  tripadvisor: { mu: 8.0, sigma: 0.8 },
-  opentable: { mu: 8.6, sigma: 0.6 },
-  thefork: { mu: 9.0, sigma: 0.4 },
+  google: { mu: 8.98, sigma: 1.0 },
+  tripadvisor: { mu: 8.44, sigma: 1.0 },
+  opentable: { mu: 9.7, sigma: 1.0 },
+  thefork: { mu: 9.28, sigma: 1.0 },
 };
 
 // Source trust weights. Editorial is handled separately (capped bonus).
