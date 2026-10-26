@@ -45,6 +45,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^26.6.5",
     "@types/react": "^18.3.31",
+    "babel-plugin-module-resolver": "^5.0.3",
     "better-sqlite3": "^13.0.3",
     "drizzle-kit": "^0.31.11",
     "jest-expo": "~52.0.0",
