@@ -286,6 +286,17 @@ export function getWines(db: MesaDb, restaurantId: string): Wine[] {
   return db.select().from(wines).where(eq(wines.restaurant_id, restaurantId)).all() as Wine[];
 }
 
+// Groups wines by type for the grouped Wine tab (spec §7.4). Wines with no
+// type fall under 'other'.
+export function groupWinesByType(list: Wine[]): Record<string, Wine[]> {
+  const out: Record<string, Wine[]> = {};
+  for (const w of list) {
+    const key = w.wine_type ?? 'other';
+    (out[key] ??= []).push(w);
+  }
+  return out;
+}
+
 export function addWine(db: MesaDb, restaurantId: string, input: WineInput): string {
   const id = newId();
   db.insert(wines)
