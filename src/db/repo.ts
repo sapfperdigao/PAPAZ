@@ -185,7 +185,14 @@ export function updateRestaurant(
   id: string,
   patch: Partial<CreateRestaurantInput>,
 ): void {
-  db.update(restaurants).set(patch).where(eq(restaurants.id, id)).run();
+  // The edit form submits every field; a cleared optional arrives as
+  // undefined. Drizzle's .set() drops undefined keys (leaving the old value),
+  // so coerce undefined → null to actually clear the column.
+  const normalized: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(patch)) {
+    normalized[key] = value === undefined ? null : value;
+  }
+  db.update(restaurants).set(normalized).where(eq(restaurants.id, id)).run();
 }
 
 export function deleteRestaurant(db: MesaDb, id: string): void {

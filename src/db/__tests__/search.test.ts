@@ -16,6 +16,13 @@ describe('listRestaurants search (FTS5)', () => {
     expect(items.every((r) => r.zone === 'Chiado')).toBe(true);
   });
 
+  it('matches an address token', async () => {
+    const db = await seeded();
+    // Cervejaria Ramiro's sample address contains "Almirante".
+    const items = repo.listRestaurants(db, { sort: 'name', search: 'almirante' });
+    expect(items.some((r) => r.name === 'Cervejaria Ramiro')).toBe(true);
+  });
+
   it('matches an accented name from an ascii query (ze -> Zé)', async () => {
     const db = await seeded();
     const items = repo.listRestaurants(db, { sort: 'name', search: 'ze' });
