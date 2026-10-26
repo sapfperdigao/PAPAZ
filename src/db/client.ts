@@ -12,6 +12,8 @@ const MIGRATIONS = [DDL];
 // and pending migrations are applied (idempotently) on first open.
 let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
 
+export const initDb = () => Promise.resolve();
+
 export function getDb() {
   if (!_db) {
     const sqlite = openDatabaseSync('mesa.db');

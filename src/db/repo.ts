@@ -77,10 +77,15 @@ function searchIds(db: MesaDb, q: string): Set<string> | null {
   const tokens = q.toLowerCase().split(/[^0-9a-zà-ÿ]+/i).filter(Boolean);
   if (tokens.length === 0) return null;
   const matchExpr = tokens.map((t) => `${t}*`).join(' ');
-  const rows = db.all(
-    sql`SELECT r.id as id FROM restaurants r JOIN restaurants_fts f ON r.rowid = f.rowid WHERE restaurants_fts MATCH ${matchExpr}`,
-  ) as { id: string }[];
-  return new Set(rows.map((row) => row.id));
+  try {
+    const rows = db.all(
+      sql`SELECT r.id as id FROM restaurants r JOIN restaurants_fts f ON r.rowid = f.rowid WHERE restaurants_fts MATCH ${matchExpr}`,
+    ) as { id: string }[];
+    return new Set(rows.map((row) => row.id));
+  } catch {
+    // FTS5 not available (web build) — search returns no constraint
+    return null;
+  }
 }
 
 export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[] {
