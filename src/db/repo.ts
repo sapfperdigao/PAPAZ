@@ -1,4 +1,4 @@
-import { and, eq } from 'drizzle-orm';
+import { and, eq, sql } from 'drizzle-orm';
 import type { Category, PriceRange, RatingSource, WineType } from '@/domain';
 import { haversineKm, type LatLng } from '@/utils/haversine';
 import { normalizeScore } from '@/utils/normalizeRating';
@@ -67,13 +67,20 @@ function personalStars(score: number | null): number | null {
   return score == null ? null : score / 2;
 }
 
-// Basic substring search; Task 7 replaces this with FTS5.
-function matchesSearch(r: Restaurant, q: string): boolean {
-  const needle = q.trim().toLowerCase();
-  if (!needle) return true;
-  return [r.name, r.zone, r.address]
-    .filter(Boolean)
-    .some((f) => f!.toLowerCase().includes(needle));
+// FTS5 full-text search over name/zone/address. Tokenizes the query on
+// non-alphanumeric characters (so punctuation can't produce an invalid MATCH
+// expression — Review Focus #3) and prefix-matches each token. The unicode61
+// tokenizer strips diacritics, so an ascii query ("ze") matches an accented
+// name ("Zé") and vice-versa. Returns null when the query has no usable
+// tokens, meaning "no search constraint".
+function searchIds(db: MesaDb, q: string): Set<string> | null {
+  const tokens = q.toLowerCase().split(/[^0-9a-zà-ÿ]+/i).filter(Boolean);
+  if (tokens.length === 0) return null;
+  const matchExpr = tokens.map((t) => `${t}*`).join(' ');
+  const rows = db.all(
+    sql`SELECT r.id as id FROM restaurants r JOIN restaurants_fts f ON r.rowid = f.rowid WHERE restaurants_fts MATCH ${matchExpr}`,
+  ) as { id: string }[];
+  return new Set(rows.map((row) => row.id));
 }
 
 export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[] {
@@ -109,7 +116,8 @@ export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[
     items = items.filter((r) => r.bookmarked === 1);
   }
   if (opts.search) {
-    items = items.filter((r) => matchesSearch(r, opts.search!));
+    const ids = searchIds(db, opts.search);
+    if (ids) items = items.filter((r) => ids.has(r.id));
   }
 
   const byName = (a: RestaurantListItem, b: RestaurantListItem) =>
