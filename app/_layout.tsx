@@ -20,6 +20,10 @@ export default function RootLayout() {
     <QueryClientProvider client={queryClient}>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen
+          name="restaurant/[id]"
+          options={{ headerShown: true, title: 'Restaurant', headerBackTitle: 'Back' }}
+        />
       </Stack>
     </QueryClientProvider>
   );
