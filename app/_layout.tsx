@@ -1,9 +1,7 @@
 import '../global.css';
 import { Stack } from 'expo-router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
-// Inline client for scaffold; extracted to src/query/client.ts in Task 6.
-const queryClient = new QueryClient();
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '@/query/client';
 
 export default function RootLayout() {
   return (
