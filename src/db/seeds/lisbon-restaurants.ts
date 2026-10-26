@@ -57,7 +57,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     longitude: -9.1355,
     thefork_url: 'https://www.thefork.pt/restaurante/cervejaria-ramiro',
     ratings: [
-      { source: 'tripadvisor', score: 8.0, max_score: 10, review_count: 12000 },
+      { source: 'tripadvisor', score: 8.0, max_score: 5, review_count: 12000 },
     ],
     dishes: [
       { name: 'Gambas à la Guilho', must_try: true, source: 'personal' },

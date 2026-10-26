@@ -47,7 +47,12 @@ export default function BookmarksScreen() {
         data={items}
         keyExtractor={(r) => r.id}
         renderItem={({ item }) => (
-          <RestaurantCard item={item} onPress={() => router.push(`/restaurant/${item.id}`)} />
+          <RestaurantCard
+            item={item}
+            onPress={() =>
+              router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
+            }
+          />
         )}
         ListEmptyComponent={
           <Text className="mt-10 text-center text-neutral-500">No bookmarks here yet.</Text>

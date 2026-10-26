@@ -2,6 +2,11 @@
 // external-content sync triggers FTS5 requires to stay in step with the
 // restaurants table (the spec names the FTS table but not its triggers).
 // Run once on DB open against both expo-sqlite (app) and better-sqlite3 (tests).
+//
+// SHARP EDGE: the FTS index is kept in sync by the triggers below, which do
+// NOT fire on VACUUM. VACUUM renumbers rowids, so if this DB is ever VACUUMed,
+// follow it with `INSERT INTO restaurants_fts(restaurants_fts) VALUES('rebuild');`
+// or search will point at stale rowids. The app never VACUUMs today.
 
 export const DDL = `
 CREATE TABLE IF NOT EXISTS restaurants (

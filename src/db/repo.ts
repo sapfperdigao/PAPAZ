@@ -167,7 +167,8 @@ export function bookmarkSubfilter(r: RestaurantListItem, mode: BookmarkMode): bo
   }
 }
 
-export function getRestaurant(db: MesaDb, id: string): Restaurant | undefined {  return db.select().from(restaurants).where(eq(restaurants.id, id)).get() as
+export function getRestaurant(db: MesaDb, id: string): Restaurant | undefined {
+  return db.select().from(restaurants).where(eq(restaurants.id, id)).get() as
     | Restaurant
     | undefined;
 }
