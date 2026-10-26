@@ -39,9 +39,11 @@
   "private": true,
   "devDependencies": {
     "@testing-library/react-native": "^12.9.0",
+    "@types/better-sqlite3": "^9.6.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.6.5",
     "@types/react": "^18.3.31",
+    "better-sqlite3": "^13.0.3",
     "drizzle-kit": "^0.31.11",
     "jest-expo": "~52.0.0",
     "react-test-renderer": "^18.3.1",
