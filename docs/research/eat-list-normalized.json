@@ -1,0 +1,3754 @@
+[
+  {
+    "name": "Adega das Gravatas",
+    "aliases": [
+      "Gravatas"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.1 (1.002)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Cervejaria Trindade",
+    "aliases": [
+      "Restaurante Trindade"
+    ],
+    "area": "Chiado",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 3.5 · TheFork 9.1",
+    "dish_notes": null,
+    "ambiguous": "paste 'Restaurante Trindade' = same building as Cervejaria Trindade (petiscaria + restaurant zones)",
+    "needs_research": false
+  },
+  {
+    "name": "Omakase WA",
+    "aliases": [
+      "Omakasa"
+    ],
+    "area": "Alfama",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TheFork 9.9 (86)",
+    "dish_notes": null,
+    "ambiguous": "'Omakasa' spelling loose; assumed Omakase WA (only unmatched omakase in .md) but could be another counter",
+    "needs_research": false
+  },
+  {
+    "name": "Natraj Tandoori",
+    "aliases": [
+      "Natraj"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 4.3–4.5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Potzalia / RePotzalia",
+    "aliases": [
+      "Potzalia",
+      "Re-potzalia"
+    ],
+    "area": "São Sebastião",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 3.4 · G 4.7 · Repsol",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Gambrinus",
+    "aliases": [
+      "Gambrinus"
+    ],
+    "area": "Baixa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.1 · G 4.4",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Kungfu Noodles",
+    "aliases": [
+      "Kungfu noodles"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.4 (574)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Delphi Cheesesteak",
+    "aliases": [
+      "Delphi cheesestake"
+    ],
+    "area": "Baixa/Chiado",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.7–4.8 (40)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Essencial",
+    "aliases": [
+      "Essencial"
+    ],
+    "area": "Bairro Alto",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "own 4.8 · Michelin Guide",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Sushisaito",
+    "aliases": [
+      "Sushisaito"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "Uber 4.8 (360+) · Mesa Marcada",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Cortesia",
+    "aliases": [
+      "Cortesia",
+      "Cortesia"
+    ],
+    "area": "Campo de Ourique",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 9.3 (2.534) · TA 3.4–3.5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "JNcQUOI Avenida",
+    "aliases": [
+      "J'ne ces quoi - cozido"
+    ],
+    "area": "Av. Liberdade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.6 (3.563)",
+    "dish_notes": "cozido (monthly Cozido à Portuguesa event, last Sunday, €45)",
+    "ambiguous": "paste 'J'ne ces quoi - cozido' = the monthly cozido event at JNcQUOI, not a separate restaurant",
+    "needs_research": false
+  },
+  {
+    "name": "O Nobre",
+    "aliases": [
+      "Nobre - cozido"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 4.1 · TheFork 9.5",
+    "dish_notes": "cozido",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Solar dos Presuntos",
+    "aliases": [
+      "Cozido - solar dos presuntos"
+    ],
+    "area": "Restauradores",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TA 4.2 (6.6k) · G ~4.4",
+    "dish_notes": "cozido",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Pap'Açorda",
+    "aliases": [
+      "Pap'Acorda"
+    ],
+    "area": "Cais do Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 3.7 · TheFork 9.3",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Imperial de Campo de Ourique",
+    "aliases": [
+      "Imperial de Campo de Ourique",
+      "Imperial de Campo de Ourique"
+    ],
+    "area": "Campo de Ourique",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.7 (75)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Fismuler",
+    "aliases": [
+      "Fismuller - Pao chinês com tártaro de carabineiro"
+    ],
+    "area": "São Sebastião",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.4 · Repsol",
+    "dish_notes": "pão chinês com tártaro de carabineiro",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Turvo",
+    "aliases": [
+      "Turvo - Lisboa"
+    ],
+    "area": "Areeiro/Alameda",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TA 4.7–5.0 · Repsol",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Quack Shack",
+    "aliases": [
+      "Quack Shack - Lisboa"
+    ],
+    "area": "Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 5.0 · Uber 4.5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Fogo by Alexandre Silva",
+    "aliases": [
+      "Fogo by Alexandre Silva - Lisboa"
+    ],
+    "area": "Príncipe Real",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TA 4.7 · TheFork 9.1",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Libertà Kitchen",
+    "aliases": [
+      "Libertá"
+    ],
+    "area": "Av. Liberdade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.5 · TA 4.3 (88) · TheFork 8.7 (95) · Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Soya Noodle Bar",
+    "aliases": [
+      "Soya Noodle Bar"
+    ],
+    "area": "Saldanha",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "Uber 4.6 (2.000+)",
+    "dish_notes": null,
+    "ambiguous": "Saldanha branch rated (Lisbon); the Algés branch is in Oeiras and excluded in .md",
+    "needs_research": false
+  },
+  {
+    "name": "Teimar",
+    "aliases": [
+      "Teimar - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.3 · TheFork 9.1",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Alfredo",
+    "aliases": [
+      "Alfredo - Lisbon"
+    ],
+    "area": "Beato/Arroios",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "G 4.5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Jaguar (Tasco)",
+    "aliases": [
+      "Jaguar - Tasco"
+    ],
+    "area": "Avenidas Novas",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.0 (125) · Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Gohan",
+    "aliases": [
+      "Gohan- Sushi Lisboa"
+    ],
+    "area": "Cais do Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 5.0 (23)",
+    "dish_notes": "sushi",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Paloma Negra",
+    "aliases": [
+      "Paloma Negra - Mexicano"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 5.0 (3) · Time Out 4★",
+    "dish_notes": "mexicano",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Restaurante Cerqueira",
+    "aliases": [
+      "Cerqueira",
+      "Restaurante Cerqueira - Lisboa",
+      "Restaurante  Cerqueira- Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.3 (921)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Sabores do Sichuan",
+    "aliases": [
+      "Sabores do sichuan"
+    ],
+    "area": "Martim Moniz",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.5 · Time Out 5/5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Canalha",
+    "aliases": [
+      "Canalha"
+    ],
+    "area": "Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TA 4.0 · TheFork 9.3",
+    "dish_notes": null,
+    "ambiguous": "distinct from 'Canalha Comporta' (Setúbal) in the paste",
+    "needs_research": false
+  },
+  {
+    "name": "Polémico",
+    "aliases": [
+      "Polémico"
+    ],
+    "area": "Rato",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork People's Choice 2025",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Vida de Tasca",
+    "aliases": [
+      "Vida de tasca"
+    ],
+    "area": "Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.2 (6) · Time Out · Culinary Backstreets",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Sophia Pizzoteca",
+    "aliases": [
+      "Sophia Pizzoteca and Bar"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 9.2 (206)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Sihi Mama Dumplings",
+    "aliases": [
+      "Sihi Mama Dumpling"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.8 (10) · TheFork",
+    "dish_notes": "dumplings",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Lá Joya Cantina",
+    "aliases": [
+      "Lajoya cantina",
+      "Lá Joya Cantina - Lisboa"
+    ],
+    "area": "São Bento",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 3.5–4.0 (few)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Kureiji Izakaya",
+    "aliases": [
+      "Kureiji izakaya - Lisboa",
+      "Kureiji - cais do Sodré",
+      "Kureiji"
+    ],
+    "area": "Cais do Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.5–9.6",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Galeto",
+    "aliases": [
+      "Galeto - Lisboa"
+    ],
+    "area": "Saldanha",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 3.5 (713)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Sky City Sichuan",
+    "aliases": [
+      "Sky City Sichuan - Areeiro"
+    ],
+    "area": "Areeiro",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "~4.6 (mixed)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Bairro do Avillez",
+    "aliases": [
+      "Bairro do Avillez - Arroz de limão"
+    ],
+    "area": "Chiado",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 3.9 · G 4.2 · TheFork 9.2+",
+    "dish_notes": "arroz de limão",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Santa Joana",
+    "aliases": [
+      "Santa Joana - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.4 · OpenTable 4.9",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "O Galito",
+    "aliases": [
+      "Restaurante O Galito - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.0 (146)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Cervejaria Sem Vergonha",
+    "aliases": [
+      "Cervejaria - Sem Vergonha"
+    ],
+    "area": "Chiado",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.0 (1.685)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "As Parreiras",
+    "aliases": [
+      "As parreiras - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.6 (thin)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Restaurante A Gina",
+    "aliases": [
+      "Restaurante a Gina"
+    ],
+    "area": "Parque Mayer",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "G 4.2 (4,297) · Guru 4.9 (6,958)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Retasco",
+    "aliases": [
+      "Retasco"
+    ],
+    "area": "Benfica",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.7 (1.130) · Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Marítima de Xabregas",
+    "aliases": [
+      "Marítimo de Xabregas - Bacalhau"
+    ],
+    "area": "Xabregas",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 9.1 · TA 3.9",
+    "dish_notes": "bacalhau",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Ryōshi",
+    "aliases": [
+      "Ryochi - Taberna Japonesa"
+    ],
+    "area": "Cais do Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.5 (1.014)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Kau Pastrami House",
+    "aliases": [
+      "Kau - Pastrami house"
+    ],
+    "area": "Saldanha",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "buzz-driven",
+    "dish_notes": null,
+    "ambiguous": "distinct from Kau Barbecue (Malveira, excluded)",
+    "needs_research": false
+  },
+  {
+    "name": "Snob",
+    "aliases": [
+      "Snob - Lisboa"
+    ],
+    "area": "Chiado/C. Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Pils",
+    "aliases": [
+      "Pils - Lisboa",
+      "Pils - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 4.4 · Time Out 5/5",
+    "dish_notes": null,
+    "ambiguous": "paste says Lisboa (x2) but .md master list records area as Redondo (Alentejo) — discrepancy to verify",
+    "needs_research": false
+  },
+  {
+    "name": "Uma (Marisqueira Uma)",
+    "aliases": [
+      "Uma Marisqueira - Lisboa"
+    ],
+    "area": "Baixa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.0 (3.2k)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Tasca Abaladiça",
+    "aliases": [
+      "Tasca Abaladica - campo pequeno"
+    ],
+    "area": "Rego",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.7 (65)",
+    "dish_notes": null,
+    "ambiguous": "paste says Campo Pequeno; .md corrects to Rego (Rua Dr. Álvaro de Castro 15)",
+    "needs_research": false
+  },
+  {
+    "name": "Bica do Sapato",
+    "aliases": [
+      "Boca do sapato - Lisboa"
+    ],
+    "area": "Santa Apolónia",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.2 · TA 4.2",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Duna Kebab",
+    "aliases": [
+      "Duna Kebab"
+    ],
+    "area": "Saldanha",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "Uber 4.5 (16) · NiT/Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Barbela C.P.M.",
+    "aliases": [
+      "Barbela.cpm - Peixe Snites Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.6 (few)",
+    "dish_notes": "peixe, snites",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Fófó grelhados",
+    "aliases": [
+      "Fofó grelhados - Sardinhas e outros pratos tugas"
+    ],
+    "area": "Benfica",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.0,
+    "existing_key_scores": "G 4.0 (674)",
+    "dish_notes": "sardinhas, pratos tugas",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Lucimar",
+    "aliases": [
+      "Lucimar - parecido fofo"
+    ],
+    "area": "São Sebastião",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "G 4.7 (4,977) · Guru 5.0 (7,631)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "A Galé dos Manos",
+    "aliases": [
+      "A Galé dos Manos - Benfica"
+    ],
+    "area": "Benfica",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "G 4.4 · TA 3.8",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Dom Leitão",
+    "aliases": [
+      "Dom Leitão - Pina Manique"
+    ],
+    "area": "Pina Manique",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "G 4.1 · TA mixed",
+    "dish_notes": "leitão",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Tonga",
+    "aliases": [
+      "Tonga - Av do Uruguai - Frango a Passarinho"
+    ],
+    "area": "Benfica",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 5.5,
+    "existing_key_scores": "TA 3.5–3.6",
+    "dish_notes": "frango à passarinho",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Magano",
+    "aliases": [
+      "Magano - Restaurante"
+    ],
+    "area": "Campo de Ourique",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "G 4.7 (829) · Guru 4.8 (1.686)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Gancho",
+    "aliases": [
+      "Gancho - Alfama"
+    ],
+    "area": "Alfama",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TA 5.0 (few)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Coelho da Rocha",
+    "aliases": [
+      "Coelho da Rocha - Lisboa"
+    ],
+    "area": "Campo de Ourique",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 4.2 · G ~4.3",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Tinto e Brasa",
+    "aliases": [
+      "Tinto e Brasa"
+    ],
+    "area": "Rato/Amoreiras",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "G 4.8 (1,180) · TheFork 9.5 (2,100) · TA 4.9",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Belmiro",
+    "aliases": [
+      "Belmiro - Ovos à Belmiro - Arroz de Perdiz"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 9.1 (800+) · TA 3.8 (43)",
+    "dish_notes": "ovos à Belmiro, arroz de perdiz",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Do Beco padaria e brunch",
+    "aliases": [
+      "Do beco padaria e brunch"
+    ],
+    "area": "Estefânia",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "G 4.7 (1,075) · Guru 4.9 (1,795)",
+    "dish_notes": null,
+    "ambiguous": "distinct from 'O Beco' (.md 7.5) — this is the bakery/brunch spot",
+    "needs_research": false
+  },
+  {
+    "name": "Browers Beato",
+    "aliases": [
+      "Browers- jogo e cerveja"
+    ],
+    "area": "Beato",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 8.7 (1.024) · TA 3.0 (21)",
+    "dish_notes": "sports & beer hall",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "O Lâmina",
+    "aliases": [
+      "O Lamina restaurante"
+    ],
+    "area": "Avenidas Novas",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.4 (316) · Repsol",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Gunpowder",
+    "aliases": [
+      "Gunpowder"
+    ],
+    "area": "Chiado",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TheFork 9.4–9.5 (650+) · TA 4.6 · Repsol",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Pinóquio",
+    "aliases": [
+      "Pinoquio"
+    ],
+    "area": "Restauradores",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 3.9 · G 4.3",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Da Noi",
+    "aliases": [
+      "Da Noi - Lisboa",
+      "Da Noi"
+    ],
+    "area": "Lapa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "#38 '101'",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Copo Largo",
+    "aliases": [
+      "Copo Largo - Tasca",
+      "Copo Largo"
+    ],
+    "area": "Alfama/Mouraria",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.0 (33)",
+    "dish_notes": "tasca",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Boteco Arandu",
+    "aliases": [
+      "Boteco Arandu - Entrecampos?"
+    ],
+    "area": "Entrecampos",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "press-driven",
+    "dish_notes": null,
+    "ambiguous": "paste tagged location with '?'; .md confirms Entrecampos",
+    "needs_research": false
+  },
+  {
+    "name": "Palms Pizzeria",
+    "aliases": [
+      "Palms Pizza"
+    ],
+    "area": "Chiado/C. Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "Uber 4.6 (130+) · '101' #76",
+    "dish_notes": "NY slice",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Maria Peixeira",
+    "aliases": [
+      "Maria Peixeira - Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TA 4.6 · TheFork 9.0",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "L-Meat by Maria Peixeira",
+    "aliases": [
+      "L- Meat by Maria Oeixeira"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.4 (1.252)",
+    "dish_notes": "meat-focused",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "A Carvoaria",
+    "aliases": [
+      "Carvoaria - Posta Mirandesa"
+    ],
+    "area": "Arroios",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA 4.4 (850+)",
+    "dish_notes": "posta mirandesa",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Taberna do Quelha",
+    "aliases": [
+      "Quelha - Lisboa Açorda"
+    ],
+    "area": "Avenidas Novas",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.5–4.7",
+    "dish_notes": "açorda",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Maruoko",
+    "aliases": [
+      "Maruoko - Belém Lisboa"
+    ],
+    "area": "Belém",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "Repsol Solete",
+    "dish_notes": "okonomiyaki",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Asitique",
+    "aliases": [
+      "Asitique"
+    ],
+    "area": "Avenidas Novas",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.4 (190) · Seemor A-",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Regabofe",
+    "aliases": [
+      "Regabofe"
+    ],
+    "area": "São Sebastião",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "NiT/MAGG editorial",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Kerala",
+    "aliases": [
+      "Kerala - Lisboa"
+    ],
+    "area": "Anjos",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "TA 4.7 (142)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Ramen Joe",
+    "aliases": [
+      "Ramen Joe"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TA ~4.2 · Time Out",
+    "dish_notes": "ramen",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Mitsu",
+    "aliases": [
+      "Mitsu Omakase"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TA 4.9 · Michelin Guide",
+    "dish_notes": "omakase",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Faminto",
+    "aliases": [
+      "Faminto Restaurante Lisboa",
+      "Faminto Lisboa"
+    ],
+    "area": "Santos",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 8.8 (sibling)",
+    "dish_notes": "fire/parrilla steakhouse",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Vá-Vá Cervejaria",
+    "aliases": [
+      "Vá-vá Cervejaria"
+    ],
+    "area": "Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 5.5,
+    "existing_key_scores": "TA 3.0–3.1",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Mammarua",
+    "aliases": [
+      "Mammarua - Lisboa"
+    ],
+    "area": "Beato",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "thin data",
+    "dish_notes": "Sardinian",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Petisco Saloio",
+    "aliases": [
+      "Petisco Saloio"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TA 4.7 (256) · Time Out 5/5",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Grenache",
+    "aliases": [
+      "Grenache"
+    ],
+    "area": "Alfama",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TA 4.7 (280)",
+    "dish_notes": null,
+    "ambiguous": "Michelin-starred",
+    "needs_research": false
+  },
+  {
+    "name": "Alpendre",
+    "aliases": [
+      "Restaurante Alpendre"
+    ],
+    "area": "Alfama",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.5 (2,374) · TA 4.5 (1,681) · Guru 4.9 (4,730)",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Iru (IRÚ) Omakase",
+    "aliases": [
+      "Iru - Omakase"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "~4.9 (142)",
+    "dish_notes": "omakase",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Ueno Omakase",
+    "aliases": [
+      "Ueno - Omakase"
+    ],
+    "area": "Campo Grande",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 8.5,
+    "existing_key_scores": "TheFork 9.7",
+    "dish_notes": "omakase",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Katsu Asian Bistro",
+    "aliases": [
+      "Katsu"
+    ],
+    "area": "Cais do Sodré",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "G 4.8 (1,600+) · Time Out",
+    "dish_notes": "katsu sandos",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Yokocho",
+    "aliases": [
+      "Yokocho - Ramen"
+    ],
+    "area": "São Bento",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.5,
+    "existing_key_scores": "TheFork 9.4 (22)",
+    "dish_notes": "ramen",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Scusa",
+    "aliases": [
+      "Scusa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "TheFork 9.1 (1.800+)",
+    "dish_notes": "Italian",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Cantinho da Ameixoeira",
+    "aliases": [
+      "Cantinho da Ameixoeira"
+    ],
+    "area": "Ameixoeira",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.5 (291) · Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Pateo 13",
+    "aliases": [
+      "Pateo 13"
+    ],
+    "area": "Alfama",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 7.0,
+    "existing_key_scores": "G 4.4 (1.540) · TA 4.4 (103) · Time Out",
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "ÀCosta by Olivier",
+    "aliases": [
+      "Acosta - Olivier"
+    ],
+    "area": "Santa Maria Maior",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "G 4.4 (775) · Time Out",
+    "dish_notes": "seafood, river views",
+    "ambiguous": null,
+    "needs_research": false
+  },
+  {
+    "name": "Cantina Hindu",
+    "aliases": [
+      "Templo Hindu"
+    ],
+    "area": "Lumiar",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": 6.5,
+    "existing_key_scores": "TA 4.2 (71) · Time Out",
+    "dish_notes": "vegetarian buffet",
+    "ambiguous": "'Templo Hindu' assumed = Cantina Hindu vegetarian buffet at Templo Radha Krishna, Lumiar",
+    "needs_research": false
+  },
+  {
+    "name": "Tomorrow at 9",
+    "aliases": [
+      "Tomorrow at 9"
+    ],
+    "area": "Rua Viriato 9B",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "listed in .md 'not yet rated' — TA 3.9 (17 reviews) too thin to score",
+    "needs_research": true
+  },
+  {
+    "name": "Mourense",
+    "aliases": [
+      "Mourense - Take Away muito bom"
+    ],
+    "area": "Sete Rios",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "take away",
+    "ambiguous": "listed in .md 'not yet rated' — café/restaurant, no reviews found",
+    "needs_research": true
+  },
+  {
+    "name": "Tasquinha de Benfica",
+    "aliases": [
+      "Tasquinha de Benfica"
+    ],
+    "area": "Benfica",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "listed in .md 'not yet rated' — confirmed in Benfica, no aggregate rating found",
+    "needs_research": true
+  },
+  {
+    "name": "A Rampa",
+    "aliases": [
+      "A Rampa"
+    ],
+    "area": "Rua Nogueira e Sousa 12",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "closed",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "permanently closed 28 Jun 2025 per .md; distinct from 'Rampa do Pragal' (Almada)",
+    "needs_research": false
+  },
+  {
+    "name": "Patuá",
+    "aliases": [
+      "Patuá Lisboa"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "closed",
+    "existing_md_score": 8.0,
+    "existing_key_scores": "G ~4.8 · Gastro 8.9",
+    "dish_notes": "Macanese",
+    "ambiguous": "reportedly closed Sept 2026 (.md) — verify before relying",
+    "needs_research": false
+  },
+  {
+    "name": "Nepal (unresolved)",
+    "aliases": [
+      "Nepal"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "unknown",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "ambiguous: Olá Nepal / Sanskar Nepal / Darshan Nepal / Casa Nepalesa — specify which",
+    "needs_research": true
+  },
+  {
+    "name": "Chai Wala",
+    "aliases": [
+      "Chai Wala - Produtos Indianos"
+    ],
+    "area": "Lisboa",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "region": "lisbon-city",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "Indian sweets/products shop, not a full restaurant (.md)",
+    "needs_research": false
+  },
+  {
+    "name": "Shoyu Ramen",
+    "aliases": [
+      "Shoyu Ramen - Izakaya"
+    ],
+    "area": null,
+    "city": null,
+    "country": null,
+    "region": "unknown",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "a dish name, not a distinct restaurant (.md)",
+    "needs_research": false
+  },
+  {
+    "name": "Juve y Camps",
+    "aliases": [
+      "Juve y Camps - Vinho"
+    ],
+    "area": null,
+    "city": null,
+    "country": "Spain",
+    "region": "unknown",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "a cava/wine producer, not a restaurant",
+    "needs_research": false
+  },
+  {
+    "name": "Terras do Demo",
+    "aliases": [
+      "Terras do Demo - Vinho"
+    ],
+    "area": null,
+    "city": null,
+    "country": "Portugal",
+    "region": "unknown",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "a wine, not a restaurant",
+    "needs_research": false
+  },
+  {
+    "name": "Picanha no forno",
+    "aliases": [
+      "Picanha no forno"
+    ],
+    "area": null,
+    "city": null,
+    "country": null,
+    "region": "unknown",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "a dish (oven-roasted picanha), not a restaurant",
+    "needs_research": false
+  },
+  {
+    "name": "Sandes Anthony Bourdain",
+    "aliases": [
+      "Sandes Anthony Bourdain"
+    ],
+    "area": null,
+    "city": null,
+    "country": null,
+    "region": "unknown",
+    "status": "not-a-restaurant",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "a sandwich/reference (dish Bourdain featured), no restaurant named",
+    "needs_research": false
+  },
+  {
+    "name": "Casa Galega",
+    "aliases": [
+      "Casa Galega"
+    ],
+    "area": "Paço de Arcos",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": ".md: Paço de Arcos (Oeiras); a separate small 'Casa Galega Lisboa' tapas bar in Bairro Alto also exists",
+    "needs_research": true
+  },
+  {
+    "name": "Blitz Costa Pizza",
+    "aliases": [
+      "Blitz Costa Pizza"
+    ],
+    "area": "Costa da Caparica",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Relento",
+    "aliases": [
+      "Relento"
+    ],
+    "area": "Algés",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Damasqino",
+    "aliases": [
+      "Damasqino"
+    ],
+    "area": null,
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bogotá (Cervejaria Bogotá)",
+    "aliases": [
+      "Bogota",
+      "Bogota - Amadora"
+    ],
+    "area": "Rua Santos Mattos",
+    "city": "Amadora",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Pescador (Lagamecas)",
+    "aliases": [
+      "O Pescador Lagamecas"
+    ],
+    "area": "Lagameças",
+    "city": "Palmela",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Honor Sushi",
+    "aliases": [
+      "Honor sushi"
+    ],
+    "area": "Charneca da Caparica",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "sushi",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Churrasco da Amoreirinha",
+    "aliases": [
+      "Churrasco da Amoreirinha"
+    ],
+    "area": "Santo Estêvão, Benavente",
+    "city": "Santarém",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tasca do Toninho",
+    "aliases": [
+      "Tasca do Toninho"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from 'Restaurante Toninho - Montijo'",
+    "needs_research": true
+  },
+  {
+    "name": "Kappo",
+    "aliases": [
+      "Kappo",
+      "Kappo"
+    ],
+    "area": null,
+    "city": "Cascais",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "Michelin star (#2 '101') per .md",
+    "needs_research": true
+  },
+  {
+    "name": "Tasquinha da Costa",
+    "aliases": [
+      "Tasquinha da Costa",
+      "Tasquinha da Costa - Peixe"
+    ],
+    "area": "Costa da Caparica",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "peixe",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Kau Barbecue",
+    "aliases": [
+      "Kau- Barbecue"
+    ],
+    "area": "Malveira",
+    "city": "Mafra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "churrasco",
+    "ambiguous": "distinct from Kau Pastrami House (Lisbon)",
+    "needs_research": true
+  },
+  {
+    "name": "Velho Lídia",
+    "aliases": [
+      "Velho Lídia"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Lídia Restaurante & Bar in Lisbon",
+    "needs_research": true
+  },
+  {
+    "name": "Casa Piano",
+    "aliases": [
+      "Casa piano - enguias"
+    ],
+    "area": "Cabanas de Viriato",
+    "city": "Viseu",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "enguias",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Genoma Sushi",
+    "aliases": [
+      "Genoma"
+    ],
+    "area": "São Domingos de Rana",
+    "city": "Cascais",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "sushi",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "3 Marmelos",
+    "aliases": [
+      "3 marmelos"
+    ],
+    "area": null,
+    "city": "Évora",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Taberna Lura",
+    "aliases": [
+      "Taberna Lura"
+    ],
+    "area": "Baião",
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Pensão Borges",
+    "aliases": [
+      "Pensão Borges"
+    ],
+    "area": "Baião",
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Restaurante Borges, Campo Grande Lisboa",
+    "needs_research": true
+  },
+  {
+    "name": "Tasquinha do Fumo",
+    "aliases": [
+      "Tasquinha do fumo"
+    ],
+    "area": "Baião",
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Manjar do Marquês",
+    "aliases": [
+      "Manjar do Marques - arroz de pato"
+    ],
+    "area": null,
+    "city": "Pombal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "arroz de pato",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Casa Espresso",
+    "aliases": [
+      "Casa Expresso - Porto",
+      "Casa espresso - Porto ; sandes de rojão",
+      "Sandes de Rojão - Casa Espresso"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "sandes de rojão",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Garagem 33",
+    "aliases": [
+      "Garagem 33 - Braga"
+    ],
+    "area": null,
+    "city": "Braga",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Ninho",
+    "aliases": [
+      "Ninho - Montijo",
+      "O Ninho - Montijo"
+    ],
+    "area": null,
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Páteo Real",
+    "aliases": [
+      "Páteo Real - Alter do chão"
+    ],
+    "area": null,
+    "city": "Alter do Chão",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Sabores do Campo",
+    "aliases": [
+      "Sabores do campo - Pegões",
+      "Sabores do campo - Pegões"
+    ],
+    "area": "Pegões",
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "A Casa do Pescador",
+    "aliases": [
+      "A casa do pescador - Montijo"
+    ],
+    "area": null,
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from O Pescador (Lagameças), Palmela",
+    "needs_research": true
+  },
+  {
+    "name": "Girassol (Alcochete)",
+    "aliases": [
+      "Girassol - Alcochete"
+    ],
+    "area": null,
+    "city": "Alcochete",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Girassol (Sarilhos)",
+    "needs_research": true
+  },
+  {
+    "name": "Girassol (Sarilhos)",
+    "aliases": [
+      "Girassol - Sarilhos"
+    ],
+    "area": "Sarilhos",
+    "city": "Moita",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Girassol (Alcochete)",
+    "needs_research": true
+  },
+  {
+    "name": "Grelha da Barra",
+    "aliases": [
+      "Grelha da barra - Oeiras"
+    ],
+    "area": null,
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Yuko",
+    "aliases": [
+      "Yuko - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Romeu e Julieta Hamburger",
+    "aliases": [
+      "Romeu e Julieta Hamburger - Oeiras"
+    ],
+    "area": null,
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "hamburger",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tasquinha do Bento",
+    "aliases": [
+      "Tasquinha do Bento - São Marcos"
+    ],
+    "area": "São Marcos",
+    "city": "Sintra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Mato à Vista",
+    "aliases": [
+      "Mato a vista - Paderne Algarve",
+      "Mato à Vista - Algarve"
+    ],
+    "area": "Paderne",
+    "city": "Albufeira",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "pratos de caça, feijoadas, cataplanas, peixe rei e peixe aranha frito",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Ramires",
+    "aliases": [
+      "Restaurante Ramires - Guia Faro"
+    ],
+    "area": "Guia",
+    "city": "Albufeira",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "frango piri-piri",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Landim",
+    "aliases": [
+      "O Landim - Alcobaça"
+    ],
+    "area": null,
+    "city": "Alcobaça",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tia Isabel",
+    "aliases": [
+      "Tia Isabel - Braga"
+    ],
+    "area": null,
+    "city": "Braga",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Golfinho",
+    "aliases": [
+      "O Golfinho - Barranco das Belharucas"
+    ],
+    "area": "Barranco das Belharucas",
+    "city": "Albufeira",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Praia do Rey",
+    "aliases": [
+      "Praia do Rey - Charneca Caparica"
+    ],
+    "area": "Charneca da Caparica",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Parrilha Natural",
+    "aliases": [
+      "Parrilha Natural - Uruguaio Algarve"
+    ],
+    "area": null,
+    "city": "Algarve",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "Uruguayan parrilla",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bovino (Quinta do Lago)",
+    "aliases": [
+      "Quinta do Lago - Bovino"
+    ],
+    "area": "Quinta do Lago",
+    "city": "Loulé",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Verde e Branco",
+    "aliases": [
+      "Verde e branco Setúbal"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Açude",
+    "aliases": [
+      "O Açude - Coimbra"
+    ],
+    "area": null,
+    "city": "Coimbra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Sierra Tramontana",
+    "aliases": [
+      "Sierra Tranmontana - Palma Mallorca"
+    ],
+    "area": "Palma",
+    "city": "Mallorca",
+    "country": "Spain",
+    "region": "abroad",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "LPA",
+    "aliases": [
+      "LPA - Ayamonte"
+    ],
+    "area": null,
+    "city": "Ayamonte",
+    "country": "Spain",
+    "region": "abroad",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Meraqi",
+    "aliases": [
+      "Meraqi - Ayamonte"
+    ],
+    "area": null,
+    "city": "Ayamonte",
+    "country": "Spain",
+    "region": "abroad",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Mosteiro do Leitão",
+    "aliases": [
+      "Mosteiro do Leitão - Batalha"
+    ],
+    "area": null,
+    "city": "Batalha",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "leitão",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Cruzamento",
+    "aliases": [
+      "O cruzamento - Grandola"
+    ],
+    "area": null,
+    "city": "Grândola",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Aldêa",
+    "aliases": [
+      "Aldêa - Cabanas"
+    ],
+    "area": "Cabanas",
+    "city": null,
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "location 'Cabanas' ambiguous (likely Cabanas de Tavira, Algarve)",
+    "needs_research": true
+  },
+  {
+    "name": "Punch",
+    "aliases": [
+      "Punch - Oeiras"
+    ],
+    "area": null,
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Almina",
+    "aliases": [
+      "Almina - Cascais"
+    ],
+    "area": null,
+    "city": "Cascais",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Zé Varunca",
+    "aliases": [
+      "Zé Varunca - Paços D'Arcos"
+    ],
+    "area": "Paço de Arcos",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Intemporal",
+    "aliases": [
+      "Intemporal - Paço D'Arcos"
+    ],
+    "area": "Paço de Arcos",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bodega Brava",
+    "aliases": [
+      "Bodega Brava - Cascais"
+    ],
+    "area": null,
+    "city": "Cascais",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Srikaya",
+    "aliases": [
+      "Srikaya - Setúbal",
+      "Srikaya - Setubal"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Casa Ideal",
+    "aliases": [
+      "Casa ideal - Trafaria"
+    ],
+    "area": "Trafaria",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Toninho",
+    "aliases": [
+      "Restaurante Toninho - Montijo"
+    ],
+    "area": null,
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Tasca do Toninho (Setúbal)",
+    "needs_research": true
+  },
+  {
+    "name": "Voraz",
+    "aliases": [
+      "Voraz - Barreiro",
+      "Voraz - Barreiro"
+    ],
+    "area": null,
+    "city": "Barreiro",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Calma Calma",
+    "aliases": [
+      "Calma Calma - italiano Setúbal"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "Italian",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Mar Azul 2",
+    "aliases": [
+      "Mar Azul 2 - Setúbal Peixe"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "peixe",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Delícia",
+    "aliases": [
+      "Delícia - bitoque Setúbal Nuno"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "bitoque",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Chapa 7",
+    "aliases": [
+      "Chapa 7 - Santarém",
+      "Chapa 7 - Restaurante",
+      "Chapa 7"
+    ],
+    "area": null,
+    "city": "Santarém",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Atrevo",
+    "aliases": [
+      "Atrevo - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Retiro do Capitanga",
+    "aliases": [
+      "Retiro do Capitanga - Sintra"
+    ],
+    "area": null,
+    "city": "Sintra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Baco Coffee Lab",
+    "aliases": [
+      "Baco Coffee Lab - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Cantinho do João",
+    "aliases": [
+      "O cantinho do João - Odivelas"
+    ],
+    "area": null,
+    "city": "Odivelas",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "Odivelas is a separate municipality (Greater Lisbon), not Lisbon city",
+    "needs_research": true
+  },
+  {
+    "name": "Sushi Pearl",
+    "aliases": [
+      "Sushi Pearl - Algarve"
+    ],
+    "area": null,
+    "city": "Algarve",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "sushi",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Vitor (Póvoa de Lanhoso)",
+    "aliases": [
+      "Póvoa do Lanhoso - O Vitor"
+    ],
+    "area": null,
+    "city": "Póvoa de Lanhoso",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from 'O Victor - Montijo'",
+    "needs_research": true
+  },
+  {
+    "name": "O Típico da Bairrada",
+    "aliases": [
+      "O típico da bairrada - Leitão"
+    ],
+    "area": null,
+    "city": "Bairrada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "leitão",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Parreirinha de Algés",
+    "aliases": [
+      "Parreirinha de Alges - Sardinhas"
+    ],
+    "area": "Algés",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "sardinhas",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Enigma dos Mariscos",
+    "aliases": [
+      "Enigma dos mariscos - Azeitao"
+    ],
+    "area": "Azeitão",
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "mariscos",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Deselegante",
+    "aliases": [
+      "Deselegante - Santarém"
+    ],
+    "area": null,
+    "city": "Santarém",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante António",
+    "aliases": [
+      "Restaurante António - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Fava Tonka",
+    "aliases": [
+      "Fava Tonka - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Victor (Montijo)",
+    "aliases": [
+      "O Victor - Montijo - Peixe Assado"
+    ],
+    "area": null,
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "peixe assado",
+    "ambiguous": "distinct from 'O Vitor - Póvoa de Lanhoso'",
+    "needs_research": true
+  },
+  {
+    "name": "Os Martins",
+    "aliases": [
+      "Os Martins - Amadora"
+    ],
+    "area": null,
+    "city": "Amadora",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Oficina dos Rissóis",
+    "aliases": [
+      "Oficina dos Rissois - Porto"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "rissóis",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tasquinha do Butes",
+    "aliases": [
+      "Tasquinha do Butes - Charneca da Caparica"
+    ],
+    "area": "Charneca da Caparica",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Marisqueira do Samouco",
+    "aliases": [
+      "Marisqueira do Samouco"
+    ],
+    "area": "Samouco",
+    "city": "Alcochete",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "mariscos",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Tia Alice",
+    "aliases": [
+      "Restaurante Tia Alice - Negrais"
+    ],
+    "area": "Negrais",
+    "city": "Sintra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "leitão",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Ti Silvina",
+    "aliases": [
+      "Restaurante Ti Silvina - Alcácer"
+    ],
+    "area": null,
+    "city": "Alcácer do Sal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Pérola da Mourisca",
+    "aliases": [
+      "Pérola da Mourisca - Setúbal"
+    ],
+    "area": "Mourisca",
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Constantino (Benfica do Ribatejo)",
+    "aliases": [
+      "Benfica do Ribatejo- Constantino"
+    ],
+    "area": "Benfica do Ribatejo",
+    "city": "Almeirim",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bugalho",
+    "aliases": [
+      "Bugalho - Guimarães"
+    ],
+    "area": null,
+    "city": "Guimarães",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Canalha Comporta",
+    "aliases": [
+      "Canalha Comporta"
+    ],
+    "area": "Comporta",
+    "city": "Alcácer do Sal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from Canalha (Lisbon, Alvalade)",
+    "needs_research": true
+  },
+  {
+    "name": "O Farol",
+    "aliases": [
+      "O Farol - Arrábida"
+    ],
+    "area": "Arrábida",
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Zé Manel dos Ossos",
+    "aliases": [
+      "Zé Manel dos Ossos - Coimbra"
+    ],
+    "area": null,
+    "city": "Coimbra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Pear",
+    "aliases": [
+      "Pear - Faro"
+    ],
+    "area": null,
+    "city": "Faro",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Capa Negra",
+    "aliases": [
+      "Capa Negra - Porto Francesinha"
+    ],
+    "area": null,
+    "city": "Porto",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "francesinha",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Parea",
+    "aliases": [
+      "Parea - Oeiras"
+    ],
+    "area": null,
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tasca do Isaías",
+    "aliases": [
+      "Tasca do Isaías - Sesimbra"
+    ],
+    "area": null,
+    "city": "Sesimbra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Costa Nossa",
+    "aliases": [
+      "Costa Nossa - Sesimbra"
+    ],
+    "area": null,
+    "city": "Sesimbra",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "O Rastilho",
+    "aliases": [
+      "O Rastilho - Barcarena"
+    ],
+    "area": "Barcarena",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tia Rosa",
+    "aliases": [
+      "Tia Rosa - Melides"
+    ],
+    "area": "Melides",
+    "city": "Grândola",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Alcides",
+    "aliases": [
+      "Alcides - São Miguel, Ponta Delgada"
+    ],
+    "area": "Ponta Delgada, São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bom Pesqueiro",
+    "aliases": [
+      "Bom Pesqueiro - São Miguel, Ponta Delgada"
+    ],
+    "area": "Ponta Delgada, São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Quinta dos Sabores",
+    "aliases": [
+      "Quinta dos Sabores - São Miguel, rabo de peixe - Jantar"
+    ],
+    "area": "Rabo de Peixe, São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "dinner",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Galego",
+    "aliases": [
+      "Galego - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Casa de Pasto o Amaral",
+    "aliases": [
+      "Casa de Pasto o Amaral - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Gastrónomo",
+    "aliases": [
+      "Gastrónomo - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Otaka",
+    "aliases": [
+      "Otaka- Japonês / Peruano - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "Japanese/Peruvian",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Abel",
+    "aliases": [
+      "Abel - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Aliança",
+    "aliases": [
+      "Aliança - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Bar Caloura",
+    "aliases": [
+      "Bar Caloura - São Miguel, caloura (lapas e tal)"
+    ],
+    "area": "Caloura, São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "lapas",
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Saca Rolhas",
+    "aliases": [
+      "Saca Rolhas - São Miguel"
+    ],
+    "area": "São Miguel",
+    "city": "Azores",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Tua Madre",
+    "aliases": [
+      "Tua Madre - Évora"
+    ],
+    "area": null,
+    "city": "Évora",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Floresta (Caxias)",
+    "aliases": [
+      "Floresta em Caxias"
+    ],
+    "area": "Caxias",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Rampa do Pragal",
+    "aliases": [
+      "Rampa do Pragal - Almada"
+    ],
+    "area": "Pragal",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "distinct from 'A Rampa' (Lisbon, closed)",
+    "needs_research": true
+  },
+  {
+    "name": "Austa",
+    "aliases": [
+      "Austa- Algarve"
+    ],
+    "area": null,
+    "city": "Algarve",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "spelling uncertain",
+    "needs_research": true
+  },
+  {
+    "name": "Mezé",
+    "aliases": [
+      "Mezé- Setúbal"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Muchacho",
+    "aliases": [
+      "Muchacho - Barcarena"
+    ],
+    "area": "Barcarena",
+    "city": "Oeiras",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Taberna da Maré",
+    "aliases": [
+      "Taberna da Maré- Portimão"
+    ],
+    "area": null,
+    "city": "Portimão",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "St. John",
+    "aliases": [
+      "St John restaurant - London"
+    ],
+    "area": null,
+    "city": "London",
+    "country": "UK",
+    "region": "abroad",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Feito no Zambujal",
+    "aliases": [
+      "Feito no Zambujal"
+    ],
+    "area": "Zambujal",
+    "city": null,
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "location 'Zambujal' ambiguous (several in PT)",
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Garrafeira Veneza",
+    "aliases": [
+      "Restaurante Garrafeira Veneza - Algarve"
+    ],
+    "area": null,
+    "city": "Algarve",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "galinha cerejada",
+    "ambiguous": "note: reserve and ask to sit in the garrafeira (wine cellar)",
+    "needs_research": true
+  },
+  {
+    "name": "Tasca do Celso",
+    "aliases": [
+      "Vila Nova Milfontes — Tasca do Celso"
+    ],
+    "area": "Vila Nova de Milfontes",
+    "city": "Odemira",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": "paste had 'Vila Nova Milfontes' as a location header with 'Tasca do Celso' as the restaurant",
+    "needs_research": true
+  },
+  {
+    "name": "Lamelas",
+    "aliases": [
+      "Porto Covo: Lamelas"
+    ],
+    "area": "Porto Covo",
+    "city": "Sines",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": "arroz de peixe",
+    "ambiguous": "paste 'Porto Covo: Lamelas' = Lamelas restaurant in Porto Covo",
+    "needs_research": true
+  },
+  {
+    "name": "Restaurante Sul",
+    "aliases": [
+      "Restaurante Sul - Burgau"
+    ],
+    "area": "Burgau",
+    "city": "Vila do Bispo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Trafaria na Brasa",
+    "aliases": [
+      "Trafaria na brasa"
+    ],
+    "area": "Trafaria",
+    "city": "Almada",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Soce",
+    "aliases": [
+      "Soce - Setúbal"
+    ],
+    "area": null,
+    "city": "Setúbal",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "As Colunas",
+    "aliases": [
+      "As Colunas - Amadora"
+    ],
+    "area": null,
+    "city": "Amadora",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Sala do Chef",
+    "aliases": [
+      "Sala do Chef - Montijo"
+    ],
+    "area": null,
+    "city": "Montijo",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  },
+  {
+    "name": "Casa do Lavrador",
+    "aliases": [
+      "Casa do Lavrador - Baiao"
+    ],
+    "area": null,
+    "city": "Baião",
+    "country": "Portugal",
+    "region": "portugal-other",
+    "status": "open",
+    "existing_md_score": null,
+    "existing_key_scores": null,
+    "dish_notes": null,
+    "ambiguous": null,
+    "needs_research": true
+  }
+]

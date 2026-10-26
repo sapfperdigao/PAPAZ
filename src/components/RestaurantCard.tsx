@@ -24,8 +24,16 @@ export function RestaurantCard({
         <Text className="flex-1 text-base font-semibold text-neutral-900 dark:text-neutral-50">
           {item.name}
         </Text>
+        {item.consensus != null ? (
+          <View
+            className="ml-2 rounded-md px-1.5 py-0.5"
+            style={{ backgroundColor: tokens.color.accent }}
+          >
+            <Text className="text-xs font-bold text-black">{item.consensus.toFixed(1)}</Text>
+          </View>
+        ) : null}
         {item.bookmarked === 1 ? (
-          <Ionicons name="bookmark" size={16} color={tokens.color.danger} />
+          <Ionicons name="bookmark" size={16} color={tokens.color.danger} style={{ marginLeft: 6 }} />
         ) : null}
       </View>
 

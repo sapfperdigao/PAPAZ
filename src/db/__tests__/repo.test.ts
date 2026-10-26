@@ -45,14 +45,16 @@ describe('repo.listRestaurants', () => {
     expect(byRating[byRating.length - 1].personalRating).toBeNull();
   });
 
-  it('computes distance when an origin is given and sorts by it', async () => {
-    const db = await seeded();
-    // Origin near Chiado — Tasca do Chico / Trindade should be closest.
+  it('computes distance when an origin is given and sorts by it', () => {
+    const { db } = makeTestDb();
+    repo.createRestaurant(db, { name: 'Near', category: 'tasca', latitude: 38.711, longitude: -9.1448 });
+    repo.createRestaurant(db, { name: 'Far', category: 'tasca', latitude: 38.76, longitude: -9.1 });
     const items = repo.listRestaurants(db, {
       sort: 'distance',
       origin: { lat: 38.711, lng: -9.1448 },
     });
     expect(items[0].distanceKm).not.toBeNull();
+    expect(items[0].name).toBe('Near');
     for (let i = 1; i < items.length; i++) {
       expect(items[i].distanceKm! >= items[i - 1].distanceKm!).toBe(true);
     }

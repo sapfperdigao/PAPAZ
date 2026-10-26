@@ -23,6 +23,7 @@ function EditButton({ id }: { id?: string }) {
 
 export default function RootLayout() {
   // Seed the built-in sample on first launch, then refresh any list queries.
+  // getDb() opens synchronously and applies pending migrations on first call.
   useEffect(() => {
     seedIfEmpty(getDb())
       .then((n) => {

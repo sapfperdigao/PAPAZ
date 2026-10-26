@@ -1,7 +1,7 @@
 import { View, Text, Pressable, Linking, ScrollView } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
-import { useRestaurant, useRatings } from '@/hooks/useRestaurant';
+import { useRestaurant, useRatings, useConsensus } from '@/hooks/useRestaurant';
 import { CategoryBadge } from '@/components/CategoryBadge';
 import { PriceBadge } from '@/components/PriceBadge';
 import { RatingBar, type SourceScores } from '@/components/RatingBar';
@@ -11,6 +11,7 @@ export default function OverviewTab() {
   const id = String(params.id);
   const { data: r } = useRestaurant(id);
   const { data: ratings = [] } = useRatings(id);
+  const { data: consensus } = useConsensus(id);
 
   if (!r) {
     return (
@@ -57,6 +58,20 @@ export default function OverviewTab() {
       ) : null}
 
       <Text className="mb-2 mt-6 text-xs font-semibold text-neutral-500">Consensus</Text>
+      {consensus ? (
+        <View className="mb-3 flex-row items-end gap-2">
+          <Text className="text-3xl font-bold text-neutral-900 dark:text-neutral-50">
+            {consensus.score.toFixed(1)}
+          </Text>
+          <Text className="pb-1 text-xs text-neutral-500">
+            ± {consensus.band.toFixed(1)} · {consensus.sourceCount} source
+            {consensus.sourceCount === 1 ? '' : 's'}
+            {consensus.totalReviews > 0
+              ? ` · ~${consensus.totalReviews.toLocaleString()} reviews`
+              : ''}
+          </Text>
+        </View>
+      ) : null}
       <RatingBar scores={scores} />
     </ScrollView>
   );

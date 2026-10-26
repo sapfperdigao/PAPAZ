@@ -1,12 +1,8 @@
 import { openDatabaseSync } from 'expo-sqlite';
 import { drizzle } from 'drizzle-orm/expo-sqlite';
-import { DDL } from './ddl';
 import { runMigrations } from './migrate';
+import { MIGRATIONS } from './migrations';
 import * as schema from './schema';
-
-// Ordered migrations. Index + 1 = version. v1 is the baseline DDL; append
-// ALTER/CREATE scripts for future schema changes — never edit a shipped entry.
-const MIGRATIONS = [DDL];
 
 // App database (on-device). Lazily opened singleton. Foreign keys are enabled
 // and pending migrations are applied (idempotently) on first open.

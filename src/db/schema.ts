@@ -25,6 +25,9 @@ export const restaurants = sqliteTable('restaurants', {
   bookmarked: integer('bookmarked').notNull().default(0),
   visited: integer('visited').notNull().default(0),
   created_at: text('created_at').notNull(),
+  // JSON-encoded EditorialSignals (Michelin/Repsol/Time Out/…) — added in
+  // migration v2; feeds the consensus editorial bonus. Nullable.
+  editorial_json: text('editorial_json'),
 });
 
 export const ratings = sqliteTable('ratings', {

@@ -28,7 +28,7 @@ interface UiState {
 }
 
 export const useUiStore = create<UiState>((set) => ({
-  sort: 'rating',
+  sort: 'consensus',
   filters: emptyFilters,
   setSort: (sort) => set({ sort }),
   setFilters: (patch) => set((s) => ({ filters: { ...s.filters, ...patch } })),
