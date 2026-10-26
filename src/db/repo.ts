@@ -151,8 +151,23 @@ export function listRestaurants(db: MesaDb, opts: ListOpts): RestaurantListItem[
   return items;
 }
 
-export function getRestaurant(db: MesaDb, id: string): Restaurant | undefined {
-  return db.select().from(restaurants).where(eq(restaurants.id, id)).get() as
+export type BookmarkMode = 'all' | 'want-to-try' | 'visited-loved';
+
+// Sub-filter for the Bookmarks tab (spec §7.3). Operates on already-listed
+// items so it composes with listRestaurants({ bookmarkedOnly: true }).
+export function bookmarkSubfilter(r: RestaurantListItem, mode: BookmarkMode): boolean {
+  if (r.bookmarked !== 1) return false;
+  switch (mode) {
+    case 'all':
+      return true;
+    case 'want-to-try':
+      return r.visited === 0;
+    case 'visited-loved':
+      return r.visited === 1 && (r.personalRating ?? 0) >= 4.0;
+  }
+}
+
+export function getRestaurant(db: MesaDb, id: string): Restaurant | undefined {  return db.select().from(restaurants).where(eq(restaurants.id, id)).get() as
     | Restaurant
     | undefined;
 }
