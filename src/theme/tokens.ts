@@ -2,12 +2,12 @@ import type { Category } from '@/domain';
 
 // Design tokens — Warm Terracotta palette (DESIGN_PLAN §2.1, §3.1). Evolved from
 // the spec's dark-first amber (spec delta §8.4 #2). Every text/bg pairing here is
-// WCAG 2.1 AA verified (see .superpowers/sdd/design-plan/contrast.mjs).
+// WCAG 2.1 AA verified (see docs/design/contrast.mjs).
 //
-// `palette` is the light/dark source of truth. `tokens.color.*` keeps scalar,
-// light-hero defaults for the handful of call sites that pass a color straight to
-// a native prop (Ionicon `color`, inline `backgroundColor`); those go mode-aware
-// in Phase 5. Tailwind semantic classes (bg-base, text-ink, …) are the primary
+// `palette` is the light/dark source of truth. `tokens.color.*` keeps scalar
+// light values for back-compat; call sites that pass a color to a native prop
+// (Ionicon `color`, `placeholderTextColor`) read the mode-aware useThemeColors
+// hook instead. Tailwind semantic classes (bg-base, text-ink, …) are the primary
 // styling path — see tailwind.config.js, kept in sync with these values.
 export const palette = {
   base: { light: '#FAF7F2', dark: '#0C0A09' },
