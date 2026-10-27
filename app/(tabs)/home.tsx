@@ -19,6 +19,7 @@ import {
 import { RestaurantCard } from '@/components/RestaurantCard';
 import { useCatalog, useRecentVisits, deriveStats } from '@/hooks/useHome';
 import { useUiStore } from '@/store/ui';
+import { useThemeColors } from '@/hooks/useThemeColors';
 import { greeting, COPY } from '@/utils/copy';
 import { tokens } from '@/theme/tokens';
 import type { Category, PriceRange } from '@/domain';
@@ -81,6 +82,7 @@ function RecentVisitRow({ visit, onPress }: { visit: RecentVisit; onPress: () =>
 // when there's no user data yet. Each data module owns its four states (§4).
 export default function HomeScreen() {
   const router = useRouter();
+  const c = useThemeColors();
   const { setFilters, setSearch, resetFilters, setSort } = useUiStore();
   const [q, setQ] = useState('');
   const catalog = useCatalog();
@@ -124,14 +126,14 @@ export default function HomeScreen() {
               {COPY.tagline}
             </Text>
             <View className="mt-3 flex-row items-center rounded-pill border border-black/10 bg-surface px-4 dark:border-white/10 dark:bg-surface-dark">
-              <Ionicons name="search" size={18} color={tokens.color.textSecondary.light} />
+              <Ionicons name="search" size={18} color={c.muted} />
               <TextInput
                 value={q}
                 onChangeText={setQ}
                 onSubmitEditing={submitSearch}
                 returnKeyType="search"
                 placeholder={COPY.searchPlaceholder}
-                placeholderTextColor={tokens.color.textSecondary.light}
+                placeholderTextColor={c.muted}
                 accessibilityLabel="Search restaurants"
                 className="ml-2 flex-1 py-3 font-sans text-ink dark:text-ink-dark"
               />
@@ -140,7 +142,13 @@ export default function HomeScreen() {
 
           {/* Stat strip — onboarding nudge when there's no engagement yet */}
           <View className="mt-5 rounded-card border border-black/5 bg-surface py-4 dark:border-white/10 dark:bg-surface-dark">
-            {hasEngagement ? (
+            {catalog.isLoading ? (
+              <Skeleton className="mx-5 h-8" />
+            ) : catalog.isError ? (
+              <Text className="px-5 text-center font-sans text-sm text-muted dark:text-muted-dark">
+                Couldn’t load your stats.
+              </Text>
+            ) : hasEngagement ? (
               <View className="flex-row justify-around">
                 <Stat value={stats.visited} label={COPY.stats.visited} />
                 <Stat value={stats.bookmarked} label={COPY.stats.bookmarked} />
@@ -212,6 +220,8 @@ export default function HomeScreen() {
             />
             {catalog.isLoading ? (
               <SkeletonList count={2} />
+            ) : catalog.isError ? (
+              <ErrorState message="Couldn’t load your saved places." onRetry={() => catalog.refetch()} />
             ) : wantToTry.length === 0 ? (
               <EmptyState
                 icon="bookmark-outline"

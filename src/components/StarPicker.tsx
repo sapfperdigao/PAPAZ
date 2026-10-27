@@ -14,7 +14,7 @@ export function StarPicker({
   size?: number;
 }) {
   return (
-    <View className="flex-row" accessibilityRole="adjustable">
+    <View className="flex-row" accessibilityLabel="Star rating">
       {[1, 2, 3, 4, 5].map((i) => {
         const name = value >= i ? 'star' : value >= i - 0.5 ? 'star-half' : 'star-outline';
         return (

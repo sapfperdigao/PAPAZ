@@ -7,7 +7,7 @@ import { ScreenContainer, Chip, EmptyState, ErrorState, SkeletonList } from '@/c
 import { useRestaurants } from '@/hooks/useRestaurants';
 import { useUiStore } from '@/store/ui';
 import { useLocation } from '@/hooks/useLocation';
-import { tokens } from '@/theme/tokens';
+import { useThemeColors } from '@/hooks/useThemeColors';
 import type { SortKey } from '@/db/repo';
 
 const SORTS: { key: SortKey; label: string }[] = [
@@ -20,6 +20,7 @@ const SORTS: { key: SortKey; label: string }[] = [
 
 export default function ListScreen() {
   const router = useRouter();
+  const c = useThemeColors();
   const { sort, filters, setSort, setSearch } = useUiStore();
   const location = useLocation();
 
@@ -46,13 +47,13 @@ export default function ListScreen() {
         {/* Search + filter trigger */}
         <View className="flex-row items-center gap-2">
           <View className="flex-1 flex-row items-center rounded-pill border border-black/10 bg-surface px-4 dark:border-white/10 dark:bg-surface-dark">
-            <Ionicons name="search" size={18} color={tokens.color.textSecondary.light} />
+            <Ionicons name="search" size={18} color={c.muted} />
             <TextInput
               placeholder="Search name, zone, address"
               defaultValue={filters.search}
               onChangeText={setSearch}
               className="ml-2 flex-1 py-2.5 font-sans text-ink dark:text-ink-dark"
-              placeholderTextColor={tokens.color.textSecondary.light}
+              placeholderTextColor={c.muted}
               accessibilityLabel="Search restaurants"
             />
           </View>
@@ -63,7 +64,7 @@ export default function ListScreen() {
             hitSlop={8}
             className="h-11 w-11 items-center justify-center rounded-pill border border-black/10 bg-surface dark:border-white/10 dark:bg-surface-dark"
           >
-            <Ionicons name="options-outline" size={20} color={tokens.color.accent} />
+            <Ionicons name="options-outline" size={20} color={c.accent} />
             {activeFilters ? (
               <View className="absolute -right-1 -top-1 h-5 w-5 items-center justify-center rounded-pill bg-accent dark:bg-accent-dark">
                 <Text className="font-sans-bold text-[10px] text-accent-fg dark:text-accent-fg-dark">

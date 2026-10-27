@@ -3,7 +3,7 @@ import { View, Text, TextInput, Pressable, ScrollView } from 'react-native';
 import type { Category, PriceRange } from '@/domain';
 import type { CreateRestaurantInput } from '@/db/repo';
 import { Chip, Button, SectionHeader } from '@/components/ui';
-import { tokens } from '@/theme/tokens';
+import { useThemeColors } from '@/hooks/useThemeColors';
 
 const CATEGORIES: { value: Category; label: string }[] = [
   { value: 'tasca', label: 'Tasca' },
@@ -22,12 +22,13 @@ function Field({
   value: string;
   onChangeText: (t: string) => void;
 }) {
+  const c = useThemeColors();
   return (
     <TextInput
       placeholder={placeholder}
       value={value}
       onChangeText={onChangeText}
-      placeholderTextColor={tokens.color.textSecondary.light}
+      placeholderTextColor={c.muted}
       accessibilityLabel={placeholder}
       className="mt-2 rounded-button border border-black/10 bg-surface px-3 py-2.5 font-sans text-ink dark:border-white/10 dark:bg-surface-dark dark:text-ink-dark"
     />

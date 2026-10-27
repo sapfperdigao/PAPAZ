@@ -7,7 +7,7 @@ import { getDb } from '@/db/client';
 import { setPersonalRating, setVisited, setBookmark, addVisit, deleteVisit } from '@/db/repo';
 import { queryClient } from '@/query/client';
 import { Button } from '@/components/ui';
-import { tokens } from '@/theme/tokens';
+import { useThemeColors } from '@/hooks/useThemeColors';
 import { selectionFeedback, successFeedback } from '@/utils/haptics';
 
 export default function MyNotesTab() {
@@ -17,6 +17,7 @@ export default function MyNotesTab() {
   const { data: ratings = [] } = useRatings(id);
   const { data: visits = [] } = useVisits(id);
   const [note, setNote] = useState('');
+  const c = useThemeColors();
 
   const personal = ratings.find((x) => x.source === 'personal');
   const stars = personal?.score != null ? personal.score / 2 : 0;
@@ -75,7 +76,7 @@ export default function MyNotesTab() {
         placeholder="Notes for a new visit (today)"
         value={note}
         onChangeText={setNote}
-        placeholderTextColor={tokens.color.textSecondary.light}
+        placeholderTextColor={c.muted}
         className="rounded-button border border-black/10 bg-surface px-3 py-2 font-sans text-ink dark:border-white/10 dark:bg-surface-dark dark:text-ink-dark"
       />
       <View className="mt-2">

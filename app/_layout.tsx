@@ -28,8 +28,9 @@ function EditButton({ id }: { id?: string }) {
 
 export default function RootLayout() {
   // Editorial type pairing — preload before first render so there is no flash of
-  // unstyled text (DESIGN_PLAN §2.2).
-  const [fontsLoaded] = useFonts(FONT_MAP);
+  // unstyled text (DESIGN_PLAN §2.2). If a font file fails to load, render anyway
+  // on the error rather than hang forever on a blank gate.
+  const [fontsLoaded, fontError] = useFonts(FONT_MAP);
   const { setColorScheme } = useColorScheme();
 
   // DB-ready gate (DESIGN_PLAN §2.2/§3.2): web's sql.js client opens
@@ -52,7 +53,9 @@ export default function RootLayout() {
         syncSeedData(getDb())
           .then((res) => {
             if (res.seeded + res.inserted + res.refreshed > 0)
-              queryClient.invalidateQueries({ queryKey: ['restaurants'] });
+              // Invalidate all read queries (restaurants + Home's catalog /
+              // recent-visits) so every surface reflects the fresh seed data.
+              queryClient.invalidateQueries();
           })
           .catch(() => {});
       })
@@ -66,7 +69,7 @@ export default function RootLayout() {
     };
   }, []);
 
-  if (!fontsLoaded || !dbReady) return null;
+  if ((!fontsLoaded && !fontError) || !dbReady) return null;
 
   return (
     <GestureHandlerRootView className="flex-1 bg-base dark:bg-base-dark">

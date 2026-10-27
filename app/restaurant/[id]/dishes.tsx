@@ -6,12 +6,13 @@ import { getDb } from '@/db/client';
 import { addDish, deleteDish } from '@/db/repo';
 import { queryClient } from '@/query/client';
 import { Button, Badge, EmptyState } from '@/components/ui';
-import { tokens } from '@/theme/tokens';
+import { useThemeColors } from '@/hooks/useThemeColors';
 
 export default function DishesTab() {
   const params = useLocalSearchParams<{ id: string }>();
   const id = String(params.id);
   const { data: dishes = [] } = useDishes(id);
+  const c = useThemeColors();
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
@@ -76,14 +77,14 @@ export default function DishesTab() {
           placeholder="Dish name"
           value={name}
           onChangeText={setName}
-          placeholderTextColor={tokens.color.textSecondary.light}
+          placeholderTextColor={c.muted}
           className="rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
         <TextInput
           placeholder="Description (optional)"
           value={description}
           onChangeText={setDescription}
-          placeholderTextColor={tokens.color.textSecondary.light}
+          placeholderTextColor={c.muted}
           className="mt-2 rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
         <View className="mt-2">

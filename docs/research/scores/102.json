@@ -1,1 +1,14 @@
-{"index": 102, "name": "Gastrónomo", "found": false, "confidence": "low", "sources": [], "notes": "No verifiable results found on Google Maps, Bing, TripAdvisor, TheFork, or Michelin Guide; Bing explicitly returned zero results for all search variants; restaurant has no detectable online presence in São Miguel, Azores."}
+{
+  "index": 102,
+  "name": "Gastrónomo",
+  "found": true,
+  "google": {"score": 4.8, "count": 3823},
+  "tripadvisor": {"score": 4.7, "count": 2742},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "high",
+  "sources": [
+    "https://www.google.com/maps/place/Gastr%C3%B3nomo/@37.7426847,-25.653851,17z/data=!3m1!4b1!4m6!3m5!1s0xb5cd5484ac34b91:0xada2dca2f83d5043",
+    "https://www.tripadvisor.pt/Restaurant_Review-g189135-d8630820-Reviews-Restaurante_Gastronomo-Ponta_Delgada_Sao_Miguel_Azores.html"
+  ],
+  "notes": "Traditional regional restaurant at R. da Boa Nova 49, Ponta Delgada; not listed on TheFork, Michelin or Repsol."
+}

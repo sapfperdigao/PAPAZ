@@ -6,7 +6,7 @@ import { getDb } from '@/db/client';
 import { addWine, deleteWine, groupWinesByType } from '@/db/repo';
 import { queryClient } from '@/query/client';
 import { Button, Chip, EmptyState } from '@/components/ui';
-import { tokens } from '@/theme/tokens';
+import { useThemeColors } from '@/hooks/useThemeColors';
 import type { WineType } from '@/domain';
 
 const TYPES: WineType[] = ['red', 'white', 'green', 'rosé', 'sparkling', 'natural', 'fortified'];
@@ -15,6 +15,7 @@ export default function WineTab() {
   const params = useLocalSearchParams<{ id: string }>();
   const id = String(params.id);
   const { data: wines = [] } = useWines(id);
+  const c = useThemeColors();
   const [name, setName] = useState('');
   const [type, setType] = useState<WineType>('red');
   const [region, setRegion] = useState('');
@@ -84,7 +85,7 @@ export default function WineTab() {
           placeholder="Wine name"
           value={name}
           onChangeText={setName}
-          placeholderTextColor={tokens.color.textSecondary.light}
+          placeholderTextColor={c.muted}
           className="rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
         <View className="mt-2 flex-row flex-wrap gap-2">
@@ -96,7 +97,7 @@ export default function WineTab() {
           placeholder="Region (optional)"
           value={region}
           onChangeText={setRegion}
-          placeholderTextColor={tokens.color.textSecondary.light}
+          placeholderTextColor={c.muted}
           className="mt-2 rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
         <View className="mt-2">
