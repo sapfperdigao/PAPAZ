@@ -8,6 +8,7 @@ import { setPersonalRating, setVisited, setBookmark, addVisit, deleteVisit } fro
 import { queryClient } from '@/query/client';
 import { Button } from '@/components/ui';
 import { tokens } from '@/theme/tokens';
+import { selectionFeedback, successFeedback } from '@/utils/haptics';
 
 export default function MyNotesTab() {
   const params = useLocalSearchParams<{ id: string }>();
@@ -50,6 +51,7 @@ export default function MyNotesTab() {
           variant={r.visited === 1 ? 'secondary' : 'ghost'}
           className="flex-1"
           onPress={() => {
+            selectionFeedback();
             setVisited(getDb(), id, r.visited !== 1);
             refresh();
           }}
@@ -59,6 +61,7 @@ export default function MyNotesTab() {
           variant={r.bookmarked === 1 ? 'primary' : 'ghost'}
           className="flex-1"
           onPress={() => {
+            selectionFeedback();
             setBookmark(getDb(), id, r.bookmarked !== 1);
             refresh();
           }}
@@ -86,6 +89,7 @@ export default function MyNotesTab() {
             });
             setNote('');
             setVisited(getDb(), id, true);
+            successFeedback();
             refresh();
           }}
         />

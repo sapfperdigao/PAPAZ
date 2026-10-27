@@ -37,7 +37,12 @@ export default function OverviewTab() {
   return (
     <ScrollView className="flex-1 bg-base px-4 py-3 dark:bg-base-dark">
       {/* Header */}
-      <Text className="font-serif-bold text-2xl text-ink dark:text-ink-dark">{r.name}</Text>
+      <Text
+        maxFontSizeMultiplier={1.3}
+        className="font-serif-bold text-2xl text-ink dark:text-ink-dark"
+      >
+        {r.name}
+      </Text>
       {r.zone ? (
         <Text className="mt-0.5 font-sans text-muted dark:text-muted-dark">{r.zone}</Text>
       ) : null}
@@ -54,7 +59,10 @@ export default function OverviewTab() {
             Consensus
           </Text>
           <View className="mt-1 flex-row items-end gap-2">
-            <Text className="font-serif-bold text-4xl text-ink dark:text-ink-dark">
+            <Text
+              maxFontSizeMultiplier={1.3}
+              className="font-serif-bold text-4xl text-ink dark:text-ink-dark"
+            >
               {consensus.score.toFixed(1)}
             </Text>
             <Text className="pb-1.5 font-sans text-xs text-muted dark:text-muted-dark">

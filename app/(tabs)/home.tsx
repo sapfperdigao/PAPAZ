@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, FlatList } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import {
@@ -112,11 +113,14 @@ export default function HomeScreen() {
   return (
     <ScreenContainer padded={false}>
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-        <View className="px-4 pb-10">
+        <Animated.View entering={FadeIn.duration(250)} className="px-4 pb-10">
           {/* Hero */}
           <View className="pt-2">
             <Text className="font-sans text-sm text-muted dark:text-muted-dark">{greeting()}</Text>
-            <Text className="font-serif-bold text-3xl text-ink dark:text-ink-dark">
+            <Text
+              maxFontSizeMultiplier={1.3}
+              className="font-serif-bold text-3xl text-ink dark:text-ink-dark"
+            >
               {COPY.tagline}
             </Text>
             <View className="mt-3 flex-row items-center rounded-pill border border-black/10 bg-surface px-4 dark:border-white/10 dark:bg-surface-dark">
@@ -246,7 +250,7 @@ export default function HomeScreen() {
               ))
             )}
           </View>
-        </View>
+        </Animated.View>
       </ScrollView>
     </ScreenContainer>
   );
