@@ -7,4 +7,8 @@ export const MIGRATIONS: string[] = [
   DDL,
   // v2: editorial signals (Michelin/Repsol/Time Out/…) for the consensus bonus.
   `ALTER TABLE restaurants ADD COLUMN editorial_json TEXT;`,
+  // v3: key/value app metadata. Stores the seed content version so an already-
+  // populated DB can be non-destructively re-synced when the seed changes
+  // (see syncSeedData in seed.ts).
+  `CREATE TABLE IF NOT EXISTS app_meta (key TEXT PRIMARY KEY, value TEXT);`,
 ];

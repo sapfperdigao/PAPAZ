@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS restaurants (
   tripadvisor_url TEXT,
   bookmarked      INTEGER NOT NULL DEFAULT 0,
   visited         INTEGER NOT NULL DEFAULT 0,
+  editorial_json  TEXT,
   created_at      TEXT NOT NULL
 );
 
@@ -68,4 +69,9 @@ CREATE INDEX IF NOT EXISTS idx_ratings_restaurant_source ON ratings(restaurant_i
 CREATE INDEX IF NOT EXISTS idx_dishes_restaurant ON dishes(restaurant_id);
 CREATE INDEX IF NOT EXISTS idx_wines_restaurant ON wines(restaurant_id);
 CREATE INDEX IF NOT EXISTS idx_visits_restaurant ON visits(restaurant_id);
+
+CREATE TABLE IF NOT EXISTS app_meta (
+  key   TEXT PRIMARY KEY,
+  value TEXT
+);
 `;

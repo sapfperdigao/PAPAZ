@@ -1,5 +1,5 @@
 import '../global.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Pressable, Text } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Stack, useRouter } from 'expo-router';
@@ -7,8 +7,8 @@ import { useFonts } from 'expo-font';
 import { useColorScheme } from 'nativewind';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@/query/client';
-import { getDb } from '@/db/client';
-import { seedIfEmpty } from '@/db/seed';
+import { getDb, initDb } from '@/db/client';
+import { syncSeedData } from '@/db/seed';
 import { FONT_MAP } from '@/theme/fonts';
 
 function EditButton({ id }: { id?: string }) {
@@ -28,10 +28,14 @@ function EditButton({ id }: { id?: string }) {
 
 export default function RootLayout() {
   // Editorial type pairing — preload before first render so there is no flash of
-  // unstyled text (DESIGN_PLAN §2.2). getDb() is synchronous, so the DB needs no
-  // separate ready-gate; seeding runs in the background and invalidates queries.
+  // unstyled text (DESIGN_PLAN §2.2).
   const [fontsLoaded] = useFonts(FONT_MAP);
   const { setColorScheme } = useColorScheme();
+
+  // DB-ready gate (DESIGN_PLAN §2.2/§3.2): web's sql.js client opens
+  // asynchronously (getDb throws before initDb resolves), so await initDb()
+  // before any query and gate the first render on it. Native initDb is instant.
+  const [dbReady, setDbReady] = useState(false);
 
   // darkMode:'class' renders light until setColorScheme runs (DESIGN_PLAN §3.2).
   // Default to 'system' (follow the OS); light is the authored hero theme.
@@ -40,14 +44,29 @@ export default function RootLayout() {
   }, [setColorScheme]);
 
   useEffect(() => {
-    seedIfEmpty(getDb())
-      .then((n) => {
-        if (n > 0) queryClient.invalidateQueries({ queryKey: ['restaurants'] });
+    let active = true;
+    initDb()
+      .then(() => {
+        if (!active) return;
+        setDbReady(true);
+        syncSeedData(getDb())
+          .then((res) => {
+            if (res.seeded + res.inserted + res.refreshed > 0)
+              queryClient.invalidateQueries({ queryKey: ['restaurants'] });
+          })
+          .catch(() => {});
       })
-      .catch(() => {});
+      .catch(() => {
+        // DB failed to open (e.g. web WASM load error) — still render so the UI
+        // can show its error states rather than hanging on a blank gate.
+        if (active) setDbReady(true);
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded || !dbReady) return null;
 
   return (
     <GestureHandlerRootView className="flex-1 bg-base dark:bg-base-dark">
@@ -68,6 +87,10 @@ export default function RootLayout() {
           <Stack.Screen
             name="restaurant/edit/[id]"
             options={{ headerShown: true, title: 'Edit', presentation: 'modal' }}
+          />
+          <Stack.Screen
+            name="filters"
+            options={{ headerShown: false, presentation: 'formSheet' }}
           />
         </Stack>
       </QueryClientProvider>

@@ -25,3 +25,10 @@ export function getDb() {
   }
   return _db;
 }
+
+// Uniform cross-platform contract with client.web.ts: callers `await initDb()`
+// once, then `getDb()` is safe. Native opens synchronously, so this just forces
+// the open + migrations during the boot gate rather than on first query.
+export async function initDb(): Promise<void> {
+  getDb();
+}
