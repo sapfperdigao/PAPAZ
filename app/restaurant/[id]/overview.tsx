@@ -1,10 +1,10 @@
-import { View, Text, Pressable, Linking, ScrollView } from 'react-native';
+import { View, Text, ScrollView, Linking } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useRestaurant, useRatings, useConsensus } from '@/hooks/useRestaurant';
 import { CategoryBadge } from '@/components/CategoryBadge';
 import { PriceBadge } from '@/components/PriceBadge';
-import { RatingBar, type SourceScores } from '@/components/RatingBar';
+import { Button, RatingBar, type SourceScores } from '@/components/ui';
 
 export default function OverviewTab() {
   const params = useLocalSearchParams<{ id: string }>();
@@ -15,8 +15,8 @@ export default function OverviewTab() {
 
   if (!r) {
     return (
-      <View className="flex-1 items-center justify-center bg-neutral-50 dark:bg-neutral-950">
-        <Text className="text-neutral-500">Loading…</Text>
+      <View className="flex-1 items-center justify-center bg-base dark:bg-base-dark">
+        <Text className="font-sans text-muted dark:text-muted-dark">Loading…</Text>
       </View>
     );
   }
@@ -35,44 +35,71 @@ export default function OverviewTab() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-neutral-50 px-4 py-3 dark:bg-neutral-950">
-      <Text className="text-xl font-bold text-neutral-900 dark:text-neutral-50">{r.name}</Text>
-      {r.zone ? <Text className="text-neutral-500">{r.zone}</Text> : null}
+    <ScrollView className="flex-1 bg-base px-4 py-3 dark:bg-base-dark">
+      {/* Header */}
+      <Text
+        maxFontSizeMultiplier={1.3}
+        className="font-serif-bold text-2xl text-ink dark:text-ink-dark"
+      >
+        {r.name}
+      </Text>
+      {r.zone ? (
+        <Text className="mt-0.5 font-sans text-muted dark:text-muted-dark">{r.zone}</Text>
+      ) : null}
 
       <View className="mt-2 flex-row items-center gap-2">
         <CategoryBadge category={r.category} />
         {r.price_range ? <PriceBadge price={r.price_range} /> : null}
       </View>
 
-      {r.address ? (
-        <Pressable onPress={openMaps} className="mt-4">
-          <Text className="text-amber-600">{r.address}</Text>
-          <Text className="mt-0.5 text-xs text-amber-600">Open in Maps →</Text>
-        </Pressable>
-      ) : null}
-
-      {r.website ? (
-        <Pressable onPress={() => WebBrowser.openBrowserAsync(r.website!)} className="mt-3">
-          <Text className="text-amber-600">Website →</Text>
-        </Pressable>
-      ) : null}
-
-      <Text className="mb-2 mt-6 text-xs font-semibold text-neutral-500">Consensus</Text>
+      {/* Consensus headline */}
       {consensus ? (
-        <View className="mb-3 flex-row items-end gap-2">
-          <Text className="text-3xl font-bold text-neutral-900 dark:text-neutral-50">
-            {consensus.score.toFixed(1)}
+        <View className="mt-5 rounded-card border border-black/5 bg-surface p-4 dark:border-white/10 dark:bg-surface-dark">
+          <Text className="font-sans-semibold text-xs uppercase tracking-wide text-muted dark:text-muted-dark">
+            Consensus
           </Text>
-          <Text className="pb-1 text-xs text-neutral-500">
-            ± {consensus.band.toFixed(1)} · {consensus.sourceCount} source
-            {consensus.sourceCount === 1 ? '' : 's'}
-            {consensus.totalReviews > 0
-              ? ` · ~${consensus.totalReviews.toLocaleString()} reviews`
-              : ''}
-          </Text>
+          <View className="mt-1 flex-row items-end gap-2">
+            <Text
+              maxFontSizeMultiplier={1.3}
+              className="font-serif-bold text-4xl text-ink dark:text-ink-dark"
+            >
+              {consensus.score.toFixed(1)}
+            </Text>
+            <Text className="pb-1.5 font-sans text-xs text-muted dark:text-muted-dark">
+              ± {consensus.band.toFixed(1)} · {consensus.sourceCount} source
+              {consensus.sourceCount === 1 ? '' : 's'}
+              {consensus.totalReviews > 0
+                ? ` · ~${consensus.totalReviews.toLocaleString()} reviews`
+                : ''}
+            </Text>
+          </View>
+          <View className="mt-3">
+            <RatingBar scores={scores} />
+          </View>
         </View>
+      ) : (
+        <View className="mt-5">
+          <RatingBar scores={scores} />
+        </View>
+      )}
+
+      {/* Links */}
+      <View className="mt-5 gap-2">
+        {r.address ? (
+          <Button label="Open in Maps" variant="ghost" leftIconName="map-outline" onPress={openMaps} />
+        ) : null}
+        {r.website ? (
+          <Button
+            label="Website"
+            variant="ghost"
+            leftIconName="globe-outline"
+            onPress={() => WebBrowser.openBrowserAsync(r.website!)}
+          />
+        ) : null}
+      </View>
+      {r.address ? (
+        <Text className="mt-2 font-sans text-xs text-muted dark:text-muted-dark">{r.address}</Text>
       ) : null}
-      <RatingBar scores={scores} />
     </ScrollView>
   );
 }

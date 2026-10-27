@@ -407,6 +407,36 @@ export function getVisits(db: MesaDb, restaurantId: string): Visit[] {
   return db.select().from(visits).where(eq(visits.restaurant_id, restaurantId)).all() as Visit[];
 }
 
+export interface RecentVisit {
+  id: string;
+  restaurantId: string;
+  restaurantName: string;
+  visitedAt: string;
+  personalRating: number | null;
+  personalNotes: string | null;
+}
+
+// Global recent-visits feed for the Home screen (DESIGN_PLAN §6.1.6). The
+// repo otherwise only exposes per-restaurant getVisits; this is the sanctioned
+// read-only data-layer add (spec delta §8.4 #3). Joins visits→restaurants for
+// the name, newest first.
+export function listRecentVisits(db: MesaDb, limit = 5): RecentVisit[] {
+  return db
+    .select({
+      id: visits.id,
+      restaurantId: visits.restaurant_id,
+      restaurantName: restaurants.name,
+      visitedAt: visits.visited_at,
+      personalRating: visits.personal_rating,
+      personalNotes: visits.personal_notes,
+    })
+    .from(visits)
+    .innerJoin(restaurants, eq(visits.restaurant_id, restaurants.id))
+    .orderBy(sql`${visits.visited_at} DESC`)
+    .limit(limit)
+    .all() as RecentVisit[];
+}
+
 export function addVisit(db: MesaDb, restaurantId: string, input: VisitInput): string {
   const id = newId();
   db.insert(visits)

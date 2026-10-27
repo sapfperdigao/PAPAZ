@@ -1,0 +1,13 @@
+{
+  "index": 82,
+  "name": "Restaurante Tia Alice (Leitões Tia Alice)",
+  "found": true,
+  "tripadvisor": {"score": 3.9, "count": 329},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "medium",
+  "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g9174408-Tia_Alice-Negrais_Sintra.html",
+    "https://tiaaliceleitoes.pt"
+  ],
+  "notes": "Suckling pig specialist in Negrais village, Sintra; TripAdvisor 3.9/5 (329 reviews, ranked #3 of 6 in Negrais); Google Maps not confirmed; TheFork not listed; no Michelin/Repsol presence found."
+}

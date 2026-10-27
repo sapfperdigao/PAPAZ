@@ -1,0 +1,11 @@
+{
+  "index": 33,
+  "name": "Yuko Tavern",
+  "found": true,
+  "google": {"score": 4.5, "count": 5233},
+  "tripadvisor": {"score": 4.3, "count": 851},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "medium",
+  "sources": ["https://restaurantguru.com/Yuko-Porto"],
+  "notes": "Portuguese tavern specialising in Francesinha at Rua de Costa Cabral 2331, Porto; ratings sourced via restaurantguru.com aggregator; TheFork not found; not in Michelin Guide"
+}

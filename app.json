@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "Mesa",
-    "slug": "mesa",
-    "scheme": "mesa",
+    "name": "PAPAZ",
+    "slug": "papaz",
+    "scheme": "papaz",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mesa.app",
+      "bundleIdentifier": "com.papaz.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Mesa uses your location to show which of your saved restaurants are closest."
+        "NSLocationWhenInUseUsageDescription": "PAPAZ uses your location to show which of your saved restaurants are closest."
       }
     },
     "android": {
-      "package": "com.mesa.app",
+      "package": "com.papaz.app",
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION"
@@ -27,7 +27,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Mesa uses your location to show which of your saved restaurants are closest."
+          "locationWhenInUsePermission": "PAPAZ uses your location to show which of your saved restaurants are closest."
         }
       ],
       "expo-asset",

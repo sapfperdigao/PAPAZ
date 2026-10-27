@@ -14,7 +14,7 @@ export function StarPicker({
   size?: number;
 }) {
   return (
-    <View className="flex-row" accessibilityRole="adjustable">
+    <View className="flex-row" accessibilityLabel="Star rating">
       {[1, 2, 3, 4, 5].map((i) => {
         const name = value >= i ? 'star' : value >= i - 0.5 ? 'star-half' : 'star-outline';
         return (
@@ -23,11 +23,17 @@ export function StarPicker({
             <Pressable
               testID={`star-${i}-half`}
               onPress={() => onChange(i - 0.5)}
+              accessibilityRole="button"
+              accessibilityLabel={`Rate ${i - 0.5} stars`}
+              hitSlop={{ top: 10, bottom: 10, left: i === 1 ? 10 : 2, right: 2 }}
               style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: size / 2 }}
             />
             <Pressable
               testID={`star-${i}-full`}
               onPress={() => onChange(i)}
+              accessibilityRole="button"
+              accessibilityLabel={`Rate ${i} stars`}
+              hitSlop={{ top: 10, bottom: 10, left: 2, right: i === 5 ? 10 : 2 }}
               style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: size / 2 }}
             />
           </View>

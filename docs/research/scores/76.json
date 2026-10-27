@@ -1,0 +1,14 @@
+{
+  "index": 76,
+  "name": "Fava Tonka",
+  "found": true,
+  "tripadvisor": {"score": 4.3, "count": 115},
+  "thefork": {"score": 9.7, "count": 600},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "medium",
+  "sources": [
+    "https://favatonka.pt",
+    "https://www.bing.com/search?q=Fava+Tonka+Porto+Portugal+restaurante"
+  ],
+  "notes": "Vegetarian/seasonal restaurant in Leça da Palmeira (Porto area), chef Nuno Castro; Google Maps rating not confirmed; no Michelin Guide listing found."
+}

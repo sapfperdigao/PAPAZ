@@ -8,10 +8,11 @@ function flatStyle(node: { props: { style?: unknown } }) {
 }
 
 describe('CategoryBadge', () => {
-  it('renders the tasca label with the amber background token', () => {
+  it('renders the tasca label with its category background token', () => {
     const { getByText, getByTestId } = render(<CategoryBadge category="tasca" />);
     expect(getByText('Tasca')).toBeTruthy();
-    expect(tokens.category.tasca).toBe('#E8A838');
+    // Assert against the token, not a literal hex, so palette retunes don't
+    // cascade into test edits (DESIGN_PLAN §8.3).
     expect(flatStyle(getByTestId('category-badge')).backgroundColor).toBe(
       tokens.category.tasca,
     );

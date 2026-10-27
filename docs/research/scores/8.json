@@ -1,0 +1,13 @@
+{
+  "index": 8,
+  "name": "Cervejaria Bogotá",
+  "found": true,
+  "google": {"score": 4.5, "count": 31},
+  "tripadvisor": {"score": 4.6, "count": 24},
+  "confidence": "medium",
+  "sources": [
+    "https://www.bing.com/search?q=%22Bogot%C3%A1%22+restaurante+Amadora&setlang=pt&cc=PT",
+    "https://www.restaurantguru.com/Cervejaria-Bogota-Amadora"
+  ],
+  "notes": "Traditional cervejaria (beer hall) in Amadora; rated on Google Maps ~4.5/5 (31 reviews) and TripAdvisor 4.6/5 (24 reviews); no TheFork listing found; no editorial/Michelin/Repsol mentions; data sourced from Bing Local snippets and Restaurant Guru aggregator, primary sites returned 403/503."
+}

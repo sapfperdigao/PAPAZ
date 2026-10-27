@@ -1,0 +1,15 @@
+{
+  "index": 25,
+  "name": "Garagem 33",
+  "found": true,
+  "editorial": {
+    "inMichelinGuide": false,
+    "pressMentions": 1
+  },
+  "confidence": "medium",
+  "sources": [
+    "https://www.nit.pt/comida/restaurantes/restaurante-braga-nasceu-garagem-hoje-serve-primeiro-ministro",
+    "https://guide.michelin.com/en/pt/restaurants"
+  ],
+  "notes": "Restaurant confirmed at Rua do Moinho 17, Vila Verde (near Braga), founded 2021; notable clientele incl. PM Montenegro; not in Michelin Guide; Google Maps/TripAdvisor/TheFork all returned access errors (EU consent/403); no ratings retrievable."
+}

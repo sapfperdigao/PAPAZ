@@ -1,0 +1,19 @@
+{
+  "index": 65,
+  "name": "Atrevo",
+  "found": true,
+  "google": {"score": 4.8, "count": 269},
+  "tripadvisor": {"score": 4.9, "count": 268},
+  "thefork": {"score": 9.7, "count": 717},
+  "editorial": {
+    "michelinStars": 0,
+    "inMichelinGuide": true,
+    "pressMentions": 2
+  },
+  "confidence": "medium",
+  "sources": [
+    "https://guide.michelin.com/en/porto-region/porto/restaurant/atrevo",
+    "https://guide.michelin.com/en/pt/restaurants?q=Atrevo"
+  ],
+  "notes": "Chef Rita Magro (Michelin Young Chef Award 2024, ex-Blind); Michelin Guide: selected/good-cooking, no star; TripAdvisor #40 of 2,572 Porto restaurants; Google score sourced from pos.do aggregator, not direct"
+}

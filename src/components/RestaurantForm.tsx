@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { View, Text, TextInput, Pressable, ScrollView } from 'react-native';
 import type { Category, PriceRange } from '@/domain';
 import type { CreateRestaurantInput } from '@/db/repo';
+import { Chip, Button, SectionHeader } from '@/components/ui';
+import { useThemeColors } from '@/hooks/useThemeColors';
 
 const CATEGORIES: { value: Category; label: string }[] = [
   { value: 'tasca', label: 'Tasca' },
@@ -20,37 +22,16 @@ function Field({
   value: string;
   onChangeText: (t: string) => void;
 }) {
+  const c = useThemeColors();
   return (
     <TextInput
       placeholder={placeholder}
       value={value}
       onChangeText={onChangeText}
-      placeholderTextColor="#9A9A9A"
-      className="mt-2 rounded-xl bg-white px-3 py-2 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50"
+      placeholderTextColor={c.muted}
+      accessibilityLabel={placeholder}
+      className="mt-2 rounded-button border border-black/10 bg-surface px-3 py-2.5 font-sans text-ink dark:border-white/10 dark:bg-surface-dark dark:text-ink-dark"
     />
-  );
-}
-
-function Option({
-  label,
-  active,
-  onPress,
-}: {
-  label: string;
-  active: boolean;
-  onPress: () => void;
-}) {
-  return (
-    <Pressable
-      onPress={onPress}
-      className={`rounded-full border px-3 py-1 ${
-        active ? 'border-amber-500 bg-amber-500' : 'border-neutral-300 dark:border-neutral-700'
-      }`}
-    >
-      <Text className={active ? 'text-xs font-semibold text-black' : 'text-xs text-neutral-500'}>
-        {label}
-      </Text>
-    </Pressable>
   );
 }
 
@@ -94,46 +75,66 @@ export function RestaurantForm({
   };
 
   return (
-    <ScrollView className="flex-1 bg-neutral-50 px-4 dark:bg-neutral-950" contentContainerClassName="pb-10">
-      <Field placeholder="Name" value={name} onChangeText={setName} />
-      <Field placeholder="Address" value={address} onChangeText={setAddress} />
-      <Field placeholder="Zone" value={zone} onChangeText={setZone} />
-
-      <Text className="mt-4 text-xs font-semibold text-neutral-500">Category</Text>
-      <View className="mt-1 flex-row flex-wrap gap-2">
-        {CATEGORIES.map((c) => (
-          <Option
-            key={c.value}
-            label={c.label}
-            active={category === c.value}
-            onPress={() => setCategory(c.value)}
-          />
-        ))}
+    <ScrollView
+      className="flex-1 bg-base px-4 dark:bg-base-dark"
+      contentContainerClassName="pb-10"
+    >
+      <View className="mt-3">
+        <SectionHeader title="Details" />
+        <Field placeholder="Name" value={name} onChangeText={setName} />
+        <Field placeholder="Address" value={address} onChangeText={setAddress} />
+        <Field placeholder="Zone" value={zone} onChangeText={setZone} />
       </View>
 
-      <Text className="mt-4 text-xs font-semibold text-neutral-500">Price</Text>
-      <View className="mt-1 flex-row flex-wrap gap-2">
-        {PRICES.map((p) => (
-          <Option key={p} label={p} active={price === p} onPress={() => setPrice(p)} />
-        ))}
+      <View className="mt-5">
+        <SectionHeader title="Category" />
+        <View className="flex-row flex-wrap gap-2">
+          {CATEGORIES.map((c) => (
+            <Chip
+              key={c.value}
+              label={c.label}
+              active={category === c.value}
+              onPress={() => setCategory(c.value)}
+            />
+          ))}
+        </View>
       </View>
 
-      <Field placeholder="Website" value={website} onChangeText={setWebsite} />
-      <Field placeholder="Phone" value={phone} onChangeText={setPhone} />
-      <Field placeholder="TheFork URL" value={theforkUrl} onChangeText={setTheforkUrl} />
-      <Field placeholder="TripAdvisor URL" value={tripadvisorUrl} onChangeText={setTripadvisorUrl} />
+      <View className="mt-5">
+        <SectionHeader title="Price" />
+        <View className="flex-row flex-wrap gap-2">
+          {PRICES.map((p) => (
+            <Chip key={p} label={p} active={price === p} onPress={() => setPrice(p)} />
+          ))}
+        </View>
+      </View>
 
-      <Pressable
-        onPress={submit}
-        accessibilityState={{ disabled: !valid }}
-        className={`mt-6 items-center rounded-xl py-3 ${valid ? 'bg-amber-500' : 'bg-neutral-300 dark:bg-neutral-800'}`}
-      >
-        <Text className="font-semibold text-black">Save</Text>
-      </Pressable>
+      <View className="mt-5">
+        <SectionHeader title="Links" />
+        <Field placeholder="Website" value={website} onChangeText={setWebsite} />
+        <Field placeholder="Phone" value={phone} onChangeText={setPhone} />
+        <Field placeholder="TheFork URL" value={theforkUrl} onChangeText={setTheforkUrl} />
+        <Field
+          placeholder="TripAdvisor URL"
+          value={tripadvisorUrl}
+          onChangeText={setTripadvisorUrl}
+        />
+      </View>
+
+      <View className="mt-6">
+        <Button label="Save" onPress={submit} disabled={!valid} />
+      </View>
 
       {mode === 'edit' && onDelete ? (
-        <Pressable onPress={onDelete} className="mt-4 items-center rounded-xl py-3">
-          <Text className="font-semibold text-red-500">Delete restaurant</Text>
+        <Pressable
+          onPress={onDelete}
+          accessibilityRole="button"
+          accessibilityLabel="Delete restaurant"
+          className="mt-4 min-h-11 items-center justify-center py-3"
+        >
+          <Text className="font-sans-semibold text-danger dark:text-danger-dark">
+            Delete restaurant
+          </Text>
         </Pressable>
       ) : null}
     </ScrollView>

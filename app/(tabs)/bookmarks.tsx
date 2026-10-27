@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { View, Text, Pressable, FlatList } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, FlatList } from 'react-native';
 import { useRouter } from 'expo-router';
 import { RestaurantCard } from '@/components/RestaurantCard';
+import { ScreenContainer, Chip, EmptyState, ErrorState, SkeletonList } from '@/components/ui';
 import { useRestaurants } from '@/hooks/useRestaurants';
 import { bookmarkSubfilter, type BookmarkMode } from '@/db/repo';
 
@@ -15,49 +15,47 @@ const MODES: { key: BookmarkMode; label: string }[] = [
 export default function BookmarksScreen() {
   const router = useRouter();
   const [mode, setMode] = useState<BookmarkMode>('all');
-  const { data: bookmarked = [] } = useRestaurants({ bookmarkedOnly: true });
+  const { data: bookmarked = [], isLoading, isError, refetch } = useRestaurants({
+    bookmarkedOnly: true,
+  });
   const items = bookmarked.filter((r) => bookmarkSubfilter(r, mode));
 
   return (
-    <SafeAreaView edges={['top']} className="flex-1 bg-neutral-50 dark:bg-neutral-950">
+    <ScreenContainer padded={false}>
       <View className="flex-row flex-wrap gap-2 px-4 pt-2">
         {MODES.map((m) => (
-          <Pressable
-            key={m.key}
-            onPress={() => setMode(m.key)}
-            className={`rounded-full border px-3 py-1 ${
-              mode === m.key
-                ? 'border-amber-500 bg-amber-500'
-                : 'border-neutral-300 dark:border-neutral-700'
-            }`}
-          >
-            <Text
-              className={
-                mode === m.key ? 'text-xs font-semibold text-black' : 'text-xs text-neutral-500'
-              }
-            >
-              {m.label}
-            </Text>
-          </Pressable>
+          <Chip key={m.key} label={m.label} active={mode === m.key} onPress={() => setMode(m.key)} />
         ))}
       </View>
 
-      <FlatList
-        className="mt-3 px-4"
-        data={items}
-        keyExtractor={(r) => r.id}
-        renderItem={({ item }) => (
-          <RestaurantCard
-            item={item}
-            onPress={() =>
-              router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
-            }
-          />
-        )}
-        ListEmptyComponent={
-          <Text className="mt-10 text-center text-neutral-500">No bookmarks here yet.</Text>
-        }
-      />
-    </SafeAreaView>
+      {isLoading ? (
+        <View className="mt-3 px-4">
+          <SkeletonList count={5} />
+        </View>
+      ) : isError ? (
+        <ErrorState message="Couldn't load bookmarks." onRetry={() => refetch()} />
+      ) : (
+        <FlatList
+          className="mt-3 px-4"
+          data={items}
+          keyExtractor={(r) => r.id}
+          renderItem={({ item }) => (
+            <RestaurantCard
+              item={item}
+              onPress={() =>
+                router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
+              }
+            />
+          )}
+          ListEmptyComponent={
+            <EmptyState
+              icon="bookmark-outline"
+              title="No bookmarks here yet"
+              body="Bookmark restaurants you want to try and they’ll appear here."
+            />
+          }
+        />
+      )}
+    </ScreenContainer>
   );
 }

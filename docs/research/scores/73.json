@@ -1,0 +1,13 @@
+{
+  "index": 73,
+  "name": "Enigma dos Mariscos",
+  "found": true,
+  "tripadvisor": {"score": 4.5, "count": 21},
+  "editorial": {"inMichelinGuide": false, "timeOut": false, "best101": false, "pressMentions": 1},
+  "confidence": "medium",
+  "sources": [
+    "https://www.tripadvisor.pt/Restaurant_Review-g1082566-d28672456-Reviews-Enigma_Dos_Mariscos-Vila_Nogueira_de_Azeitao_Setubal_District.html",
+    "https://nit.pt/food-and-drink/restaurantes/enigma-dos-mariscos"
+  ],
+  "notes": "Seafood marisqueira in Brejos de Azeitão; TripAdvisor 4.5/5 (21 reviews) confirmed across multiple searches; TheFork 9.6/10 rating found but review count not independently confirmed so omitted; 1 press mention nit.pt 2023; no Michelin, Repsol or Time Out listing found"
+}

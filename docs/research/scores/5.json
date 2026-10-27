@@ -1,0 +1,21 @@
+{
+  "index": 5,
+  "name": "Blitz Pizza & Deli",
+  "found": true,
+  "google": {
+    "score": 4.7,
+    "count": 500
+  },
+  "editorial": {
+    "inMichelinGuide": false,
+    "timeOut": true,
+    "pressMentions": 1
+  },
+  "confidence": "medium",
+  "sources": [
+    "https://maps.app.goo.gl/Y52HLhchGXsYGFJ38",
+    "https://www.blitz-pizza.com/",
+    "https://www.timeout.pt/lisboa/pt/noticias/e-preciso-atitude-para-ter-uma-pizzaria-como-a-blitz-na-costa-da-caparica-080423"
+  ],
+  "notes": "Google 4.7/500 confirmed via Maps API. Time Out editorial feature Apr 2023 confirmed (linked from restaurant website). TripAdvisor and TheFork blocked by Cloudflare — not confirmed, omitted. Not listed in Michelin Guide Portugal (202 restaurants checked). Not on OpenTable."
+}

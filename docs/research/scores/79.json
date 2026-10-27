@@ -1,0 +1,17 @@
+{
+  "index": 79,
+  "name": "Oficina dos Rissóis",
+  "found": true,
+  "editorial": {
+    "inMichelinGuide": false,
+    "timeOut": false,
+    "best101": false,
+    "pressMentions": 2
+  },
+  "confidence": "low",
+  "sources": [
+    "https://guide.michelin.com/en/restaurants?q=Oficina%20dos%20Rissois&location=Porto%2C%20Portugal",
+    "https://nit.pt/?s=Oficina+dos+Riss%C3%B3is"
+  ],
+  "notes": "Specialty oven-baked rissóis restaurant Porto; NiT article confirmed ('reinventou o rissol, sem fritos'); Público 2019 article referenced; not in Michelin Guide; Google/TripAdvisor/TheFork inaccessible (403/GDPR redirect)"
+}

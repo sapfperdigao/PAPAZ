@@ -1,0 +1,5 @@
+{"index": 77, "name": "O Victor", "found": true,
+ "google": {"score": 4.6, "count": 1204},
+ "tripadvisor": {"score": 4.3, "count": 158},
+ "editorial": {"inMichelinGuide": false},
+ "confidence": "medium", "sources": ["https://restaurantguru.com/O-Victor-Montijo", "https://nominatim.openstreetmap.org/search?format=json&q=O+Victor+Montijo", "https://guide.michelin.com/pt/en/restaurants?q=O+Victor"], "notes": "Grill restaurant at Rua José Vito da Silva, Bairro dos Pescadores, Montijo 2870-125; Google/TripAdvisor scores from restaurantguru aggregator (direct access blocked 403/503); Michelin Guide confirmed absent; no TheFork/OpenTable/Repsol mentions found"}

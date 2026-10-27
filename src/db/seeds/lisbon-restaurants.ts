@@ -58,7 +58,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "tripadvisor",
-        "score": 7.0,
+        "score": 7,
         "max_score": 5
       }
     ]
@@ -355,7 +355,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 10.0,
+        "score": 10,
         "max_score": 5
       }
     ]
@@ -405,7 +405,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5
       }
     ],
@@ -455,7 +455,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5
       }
     ],
@@ -473,7 +473,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 125
       }
@@ -490,7 +490,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 10.0,
+        "score": 10,
         "max_score": 5,
         "review_count": 23
       }
@@ -507,7 +507,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 10.0,
+        "score": 10,
         "max_score": 5,
         "review_count": 3
       }
@@ -543,7 +543,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5
       }
     ]
@@ -563,7 +563,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5
       }
     ],
@@ -644,7 +644,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 7.0,
+        "score": 7,
         "max_score": 5
       }
     ]
@@ -674,7 +674,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 7.0,
+        "score": 7,
         "max_score": 5,
         "review_count": 713
       }
@@ -747,7 +747,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 146
       }
@@ -763,7 +763,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "thefork",
-        "score": 9.0,
+        "score": 9,
         "max_score": 10,
         "review_count": 1685
       }
@@ -907,7 +907,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 3200
       }
@@ -984,7 +984,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 674
       }
@@ -1056,7 +1056,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 7.0,
+        "score": 7,
         "max_score": 5
       }
     ]
@@ -1087,7 +1087,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 10.0,
+        "score": 10,
         "max_score": 5
       }
     ],
@@ -1202,7 +1202,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "tripadvisor",
-        "score": 6.0,
+        "score": 6,
         "max_score": 5,
         "review_count": 21
       }
@@ -1287,7 +1287,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 33
       }
@@ -1326,7 +1326,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "thefork",
-        "score": 9.0,
+        "score": 9,
         "max_score": 10
       },
       {
@@ -1381,7 +1381,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5
       }
     ]
@@ -1505,7 +1505,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 6.0,
+        "score": 6,
         "max_score": 5
       }
     ]
@@ -1567,13 +1567,13 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 1681
       },
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 2374
       }
@@ -1668,7 +1668,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 291
       }
@@ -1743,13 +1743,13 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 1031
       },
       {
         "source": "tripadvisor",
-        "score": 8.0,
+        "score": 8,
         "max_score": 5,
         "review_count": 18
       }
@@ -1766,7 +1766,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 14
       }
@@ -1788,7 +1788,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "tripadvisor",
-        "score": 10.0,
+        "score": 10,
         "max_score": 5,
         "review_count": 1
       }
@@ -1881,7 +1881,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 31
       },
@@ -2155,7 +2155,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 1166
       },
@@ -2183,7 +2183,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       },
       {
         "source": "tripadvisor",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 132
       }
@@ -2199,7 +2199,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 5233
       },
@@ -2442,7 +2442,11 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Paço de Arcos",
     "city": "Oeiras",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "editorial": {
+      "inMichelinGuide": true,
+      "pressMentions": 9
+    }
   },
   {
     "name": "Bodega Brava",
@@ -2525,7 +2529,31 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Porto",
     "city": "Porto",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 269
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.8,
+        "max_score": 5,
+        "review_count": 268
+      },
+      {
+        "source": "thefork",
+        "score": 9.7,
+        "max_score": 10,
+        "review_count": 717
+      }
+    ],
+    "editorial": {
+      "inMichelinGuide": true,
+      "pressMentions": 2
+    }
   },
   {
     "name": "Retiro do Capitanga",
@@ -2584,7 +2612,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Oeiras",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "sardinhas"
+    "dish_notes": "sardinhas",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.8,
+        "max_score": 5,
+        "review_count": 26
+      }
+    ]
   },
   {
     "name": "Enigma dos Mariscos",
@@ -2596,24 +2632,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "dish_notes": "mariscos",
     "ratings": [
       {
-        "source": "google",
-        "score": 9.0,
-        "max_score": 5,
-        "review_count": 196
-      },
-      {
         "source": "tripadvisor",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 21
-      },
-      {
-        "source": "thefork",
-        "score": 9.6,
-        "max_score": 10,
-        "review_count": 800
       }
-    ]
+    ],
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "Deselegante",
@@ -2631,7 +2658,7 @@ export const lisbonSeed: SeedRestaurant[] = [
       }
     ],
     "editorial": {
-      "pressMentions": 1
+      "pressMentions": 3
     }
   },
   {
@@ -2640,7 +2667,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Porto",
     "city": "Porto",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 241
+      }
+    ]
   },
   {
     "name": "Fava Tonka",
@@ -2651,16 +2686,16 @@ export const lisbonSeed: SeedRestaurant[] = [
     "country": "Portugal",
     "ratings": [
       {
-        "source": "google",
-        "score": 9.4,
-        "max_score": 5,
-        "review_count": 879
-      },
-      {
         "source": "tripadvisor",
         "score": 8.6,
         "max_score": 5,
-        "review_count": 117
+        "review_count": 115
+      },
+      {
+        "source": "thefork",
+        "score": 9.7,
+        "max_score": 10,
+        "review_count": 600
       }
     ]
   },
@@ -2780,7 +2815,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Alcácer do Sal",
     "city": "Alcácer do Sal",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7,
+        "max_score": 5,
+        "review_count": 36
+      }
+    ]
   },
   {
     "name": "Pérola da Mourisca",
@@ -2788,7 +2831,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Mourisca",
     "city": "Setúbal",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 3100
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9,
+        "max_score": 5,
+        "review_count": 754
+      }
+    ]
   },
   {
     "name": "Constantino (Benfica do Ribatejo)",
@@ -2800,7 +2857,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "tripadvisor",
-        "score": 7.0,
+        "score": 7,
         "max_score": 5,
         "review_count": 75
       }
@@ -2887,7 +2944,7 @@ export const lisbonSeed: SeedRestaurant[] = [
     "ratings": [
       {
         "source": "google",
-        "score": 9.0,
+        "score": 9,
         "max_score": 5,
         "review_count": 2891
       },
