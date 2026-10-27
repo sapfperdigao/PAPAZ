@@ -5,6 +5,8 @@ import { useWines } from '@/hooks/useRestaurant';
 import { getDb } from '@/db/client';
 import { addWine, deleteWine, groupWinesByType } from '@/db/repo';
 import { queryClient } from '@/query/client';
+import { Button, Chip, EmptyState } from '@/components/ui';
+import { tokens } from '@/theme/tokens';
 import type { WineType } from '@/domain';
 
 const TYPES: WineType[] = ['red', 'white', 'green', 'rosé', 'sparkling', 'natural', 'fortified'];
@@ -33,22 +35,24 @@ export default function WineTab() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-neutral-50 px-4 py-3 dark:bg-neutral-950">
+    <ScrollView className="flex-1 bg-base px-4 py-3 dark:bg-base-dark">
       {Object.keys(grouped).length === 0 ? (
-        <Text className="mb-3 text-neutral-500">No wines yet.</Text>
+        <EmptyState icon="wine-outline" title="No wines yet" body="Log bottles you had below." />
       ) : (
         Object.entries(grouped).map(([groupType, list]) => (
           <View key={groupType} className="mb-4">
-            <Text className="mb-1 text-xs font-semibold uppercase text-neutral-500">{groupType}</Text>
+            <Text className="mb-1 font-sans-semibold text-xs uppercase tracking-wide text-muted dark:text-muted-dark">
+              {groupType}
+            </Text>
             {list.map((w) => (
               <View
                 key={w.id}
-                className="mb-2 flex-row items-center justify-between rounded-xl bg-white p-3 dark:bg-neutral-900"
+                className="mb-2 flex-row items-center justify-between rounded-card border border-black/5 bg-surface p-3 dark:border-white/10 dark:bg-surface-dark"
               >
                 <View className="flex-1">
-                  <Text className="font-semibold text-neutral-900 dark:text-neutral-50">{w.name}</Text>
+                  <Text className="font-serif-semibold text-ink dark:text-ink-dark">{w.name}</Text>
                   {w.region || w.producer ? (
-                    <Text className="mt-0.5 text-xs text-neutral-500">
+                    <Text className="mt-0.5 font-sans text-xs text-muted dark:text-muted-dark">
                       {[w.producer, w.region].filter(Boolean).join(' · ')}
                     </Text>
                   ) : null}
@@ -58,8 +62,13 @@ export default function WineTab() {
                     deleteWine(getDb(), w.id);
                     refresh();
                   }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Delete ${w.name}`}
+                  hitSlop={8}
                 >
-                  <Text className="text-red-500">Delete</Text>
+                  <Text className="font-sans-semibold text-sm text-danger dark:text-danger-dark">
+                    Delete
+                  </Text>
                 </Pressable>
               </View>
             ))}
@@ -67,40 +76,32 @@ export default function WineTab() {
         ))
       )}
 
-      <View className="mt-2 rounded-xl bg-white p-3 dark:bg-neutral-900">
-        <Text className="mb-2 text-xs font-semibold text-neutral-500">Add a wine</Text>
+      <View className="mt-2 rounded-card border border-black/5 bg-surface p-3 dark:border-white/10 dark:bg-surface-dark">
+        <Text className="mb-2 font-sans-semibold text-xs text-muted dark:text-muted-dark">
+          Add a wine
+        </Text>
         <TextInput
           placeholder="Wine name"
           value={name}
           onChangeText={setName}
-          placeholderTextColor="#9A9A9A"
-          className="rounded-lg bg-neutral-100 px-3 py-2 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50"
+          placeholderTextColor={tokens.color.textSecondary.light}
+          className="rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
         <View className="mt-2 flex-row flex-wrap gap-2">
           {TYPES.map((t) => (
-            <Pressable
-              key={t}
-              onPress={() => setType(t)}
-              className={`rounded-full border px-3 py-1 ${
-                type === t ? 'border-amber-500 bg-amber-500' : 'border-neutral-300 dark:border-neutral-700'
-              }`}
-            >
-              <Text className={type === t ? 'text-xs font-semibold text-black' : 'text-xs text-neutral-500'}>
-                {t}
-              </Text>
-            </Pressable>
+            <Chip key={t} label={t} active={type === t} onPress={() => setType(t)} />
           ))}
         </View>
         <TextInput
           placeholder="Region (optional)"
           value={region}
           onChangeText={setRegion}
-          placeholderTextColor="#9A9A9A"
-          className="mt-2 rounded-lg bg-neutral-100 px-3 py-2 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50"
+          placeholderTextColor={tokens.color.textSecondary.light}
+          className="mt-2 rounded-button bg-black/5 px-3 py-2 font-sans text-ink dark:bg-white/10 dark:text-ink-dark"
         />
-        <Pressable onPress={add} className="mt-2 items-center rounded-lg bg-amber-500 py-2">
-          <Text className="font-semibold text-black">Add wine</Text>
-        </Pressable>
+        <View className="mt-2">
+          <Button label="Add wine" onPress={add} />
+        </View>
       </View>
     </ScrollView>
   );

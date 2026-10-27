@@ -24,7 +24,7 @@ export function RatingBar({ scores }: { scores: SourceScores }) {
 
   if (entries.length === 0) {
     return (
-      <Text testID="rating-empty" className="text-xs text-neutral-500">
+      <Text testID="rating-empty" className="font-sans text-xs text-muted dark:text-muted-dark">
         No ratings yet
       </Text>
     );
@@ -36,14 +36,18 @@ export function RatingBar({ scores }: { scores: SourceScores }) {
         const pct = Math.max(0, Math.min(100, (value / 10) * 100));
         return (
           <View key={source} className="flex-row items-center gap-2">
-            <Text className="w-20 text-xs text-neutral-500">{LABELS[source]}</Text>
-            <View className="h-2 flex-1 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
+            <Text className="w-20 font-sans text-xs text-muted dark:text-muted-dark">
+              {LABELS[source]}
+            </Text>
+            <View className="h-2 flex-1 overflow-hidden rounded-full bg-black/10 dark:bg-white/10">
               <View
                 className="h-2 rounded-full"
                 style={{ width: `${pct}%`, backgroundColor: tokens.color.accent }}
               />
             </View>
-            <Text className="w-8 text-right text-xs text-neutral-500">{value.toFixed(1)}</Text>
+            <Text className="w-8 text-right font-sans text-xs text-muted dark:text-muted-dark">
+              {value.toFixed(1)}
+            </Text>
           </View>
         );
       })}

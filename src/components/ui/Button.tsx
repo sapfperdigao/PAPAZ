@@ -1,5 +1,8 @@
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useColorScheme } from 'nativewind';
 import { cn } from '@/utils/cn';
+import { palette } from '@/theme/tokens';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'sm' | 'md';
@@ -28,7 +31,7 @@ export function Button({
   variant = 'primary',
   size = 'md',
   disabled = false,
-  leftIcon,
+  leftIconName,
   className,
   testID,
 }: {
@@ -37,10 +40,22 @@ export function Button({
   variant?: Variant;
   size?: Size;
   disabled?: boolean;
-  leftIcon?: React.ReactNode;
+  leftIconName?: keyof typeof Ionicons.glyphMap;
   className?: string;
   testID?: string;
 }) {
+  const { colorScheme } = useColorScheme();
+  const dark = colorScheme === 'dark';
+  // Icon color matches the label fg for the variant + mode (keeps AA).
+  const iconColor =
+    variant === 'ghost'
+      ? dark
+        ? palette.accent.dark
+        : palette.accent.light
+      : dark
+        ? palette.accentFg.dark
+        : palette.accentFg.light;
+
   return (
     <Pressable
       testID={testID}
@@ -57,7 +72,7 @@ export function Button({
         className,
       )}
     >
-      {leftIcon ? <View>{leftIcon}</View> : null}
+      {leftIconName ? <Ionicons name={leftIconName} size={16} color={iconColor} /> : null}
       <Text className={cn('font-sans-semibold text-sm', LABEL[variant])}>{label}</Text>
     </Pressable>
   );
