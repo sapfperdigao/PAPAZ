@@ -1,5 +1,3 @@
 {"index": 98, "name": "Bom Pesqueiro", "found": true,
- "google": {"score": 4.7, "count": 780},
- "tripadvisor": {"score": 4.7, "count": 187},
  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
- "confidence": "high", "sources": ["https://www.google.com/maps/search/Bom+Pesqueiro+Ponta+Delgada+Azores", "https://www.tripadvisor.com/Restaurant_Review-g189135-d26586183-Reviews-Bom_Pesqueiro-Ponta_Delgada_Sao_Miguel_Azores.html"], "notes": "Seafood restaurant at Galerias das Portas do Mar, Ponta Delgada; Michelin Guide does not cover the Azores"}
+ "confidence": "low", "sources": ["https://portasdomar.pt/lojas"], "notes": "Confirmed at Portas do Mar complex, Ponta Delgada; review platforms (Google Maps, TripAdvisor) returned 403 or empty content; Michelin Guide does not cover Azores"}
