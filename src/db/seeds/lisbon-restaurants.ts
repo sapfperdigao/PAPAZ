@@ -24,9 +24,8 @@ export interface SeedRestaurant {
 }
 
 // Generated from the user's curated eat-list + Lisbon_Restaurant_Ratings.md
-// (docs/research/gen_seed.py). Ratings are derived from the .md's per-source
-// key scores; editorial from its notes. Restaurants without ratings are the
-// ones still pending web research.
+// (docs/research/gen_seed.py). MD scores = human-verified; research scores =
+// web-researched via workflow agents. Restaurants without ratings are unscored.
 export const lisbonSeed: SeedRestaurant[] = [
   {
     "name": "Adega das Gravatas",
@@ -1740,7 +1739,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Rua Viriato 9B",
     "city": "Lisbon",
     "region": "lisbon-city",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 1031
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.0,
+        "max_score": 5,
+        "review_count": 18
+      }
+    ]
   },
   {
     "name": "Mourense",
@@ -1749,7 +1762,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Lisbon",
     "region": "lisbon-city",
     "country": "Portugal",
-    "dish_notes": "take away"
+    "dish_notes": "take away",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 14
+      }
+    ]
   },
   {
     "name": "Tasquinha de Benfica",
@@ -1757,7 +1778,24 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Benfica",
     "city": "Lisbon",
     "region": "lisbon-city",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 105
+      },
+      {
+        "source": "tripadvisor",
+        "score": 10.0,
+        "max_score": 5,
+        "review_count": 1
+      }
+    ],
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "Nepal (unresolved)",
@@ -1781,7 +1819,19 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Costa da Caparica",
     "city": "Almada",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 500
+      }
+    ],
+    "editorial": {
+      "timeOut": true,
+      "pressMentions": 1
+    }
   },
   {
     "name": "Relento",
@@ -1789,7 +1839,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Algés",
     "city": "Oeiras",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.4,
+        "max_score": 5,
+        "review_count": 455
+      }
+    ]
   },
   {
     "name": "Damasqino",
@@ -1797,7 +1855,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Almada",
     "city": "Almada",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 1922
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.8,
+        "max_score": 5,
+        "review_count": 77
+      }
+    ]
   },
   {
     "name": "Bogotá (Cervejaria Bogotá)",
@@ -1805,7 +1877,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Rua Santos Mattos",
     "city": "Amadora",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 31
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 24
+      }
+    ]
   },
   {
     "name": "O Pescador (Lagamecas)",
@@ -1846,7 +1932,27 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Cascais",
     "city": "Cascais",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 277
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 54
+      }
+    ],
+    "editorial": {
+      "michelinStars": 1,
+      "inMichelinGuide": true,
+      "repsolSoles": 1,
+      "pressMentions": 2
+    }
   },
   {
     "name": "Tasquinha da Costa",
@@ -1864,7 +1970,19 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Mafra",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "churrasco"
+    "dish_notes": "churrasco",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 370
+      }
+    ],
+    "editorial": {
+      "timeOut": true,
+      "pressMentions": 4
+    }
   },
   {
     "name": "Velho Lídia",
@@ -1881,7 +1999,27 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Viseu",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "enguias"
+    "dish_notes": "enguias",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 876
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 160
+      },
+      {
+        "source": "thefork",
+        "score": 9.2,
+        "max_score": 10,
+        "review_count": 455
+      }
+    ]
   },
   {
     "name": "Genoma Sushi",
@@ -1914,7 +2052,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Baião",
     "city": "Porto",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 1374
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 376
+      }
+    ]
   },
   {
     "name": "Tasquinha do Fumo",
@@ -1948,7 +2100,10 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Braga",
     "city": "Braga",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "Ninho",
@@ -1996,7 +2151,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Sarilhos",
     "city": "Moita",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 1166
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 178
+      }
+    ]
   },
   {
     "name": "Grelha da Barra",
@@ -2004,7 +2173,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Oeiras",
     "city": "Oeiras",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 1583
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 132
+      }
+    ]
   },
   {
     "name": "Yuko",
@@ -2012,7 +2195,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Porto",
     "city": "Porto",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 5233
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 851
+      }
+    ]
   },
   {
     "name": "Romeu e Julieta Hamburger",
@@ -2029,7 +2226,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "São Marcos",
     "city": "Sintra",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 1114
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.2,
+        "max_score": 5,
+        "review_count": 27
+      }
+    ]
   },
   {
     "name": "Mato à Vista",
@@ -2047,7 +2258,24 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Albufeira",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "frango piri-piri"
+    "dish_notes": "frango piri-piri",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 6457
+      },
+      {
+        "source": "tripadvisor",
+        "score": 7.6,
+        "max_score": 5,
+        "review_count": 1492
+      }
+    ],
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "O Landim",
@@ -2096,7 +2324,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Quinta do Lago",
     "city": "Loulé",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 760
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.4,
+        "max_score": 5,
+        "review_count": 890
+      }
+    ]
   },
   {
     "name": "Verde e Branco",
@@ -2104,7 +2346,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Setúbal",
     "city": "Setúbal",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 8.4,
+        "max_score": 5,
+        "review_count": 130
+      }
+    ]
   },
   {
     "name": "O Açude",
@@ -2343,7 +2593,27 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Setúbal",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "mariscos"
+    "dish_notes": "mariscos",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 196
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 21
+      },
+      {
+        "source": "thefork",
+        "score": 9.6,
+        "max_score": 10,
+        "review_count": 800
+      }
+    ]
   },
   {
     "name": "Deselegante",
@@ -2351,7 +2621,18 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Santarém",
     "city": "Santarém",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 9.8,
+        "max_score": 5,
+        "review_count": 9
+      }
+    ],
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "Restaurante António",
@@ -2367,7 +2648,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Porto",
     "city": "Porto",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 879
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 117
+      }
+    ]
   },
   {
     "name": "O Victor (Montijo)",
@@ -2376,7 +2671,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Montijo",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "peixe assado"
+    "dish_notes": "peixe assado",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 1204
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 158
+      }
+    ]
   },
   {
     "name": "Os Martins",
@@ -2393,7 +2702,24 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Porto",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "rissóis"
+    "dish_notes": "rissóis",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 999
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.8,
+        "max_score": 5,
+        "review_count": 286
+      }
+    ],
+    "editorial": {
+      "pressMentions": 3
+    }
   },
   {
     "name": "Tasquinha do Butes",
@@ -2401,7 +2727,18 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Charneca da Caparica",
     "city": "Almada",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 471
+      }
+    ],
+    "editorial": {
+      "pressMentions": 1
+    }
   },
   {
     "name": "Marisqueira do Samouco",
@@ -2410,7 +2747,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Alcochete",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "mariscos"
+    "dish_notes": "mariscos",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 9.2,
+        "max_score": 5,
+        "review_count": 166
+      }
+    ]
   },
   {
     "name": "Restaurante Tia Alice",
@@ -2419,7 +2764,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Sintra",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "leitão"
+    "dish_notes": "leitão",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.8,
+        "max_score": 5,
+        "review_count": 329
+      }
+    ]
   },
   {
     "name": "Restaurante Ti Silvina",
@@ -2443,7 +2796,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Benfica do Ribatejo",
     "city": "Almeirim",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.0,
+        "max_score": 5,
+        "review_count": 75
+      }
+    ]
   },
   {
     "name": "Bugalho",
@@ -2451,7 +2812,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Guimarães",
     "city": "Guimarães",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 128
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 45
+      }
+    ]
   },
   {
     "name": "Canalha Comporta",
@@ -2508,7 +2883,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Sesimbra",
     "city": "Sesimbra",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.0,
+        "max_score": 5,
+        "review_count": 2891
+      },
+      {
+        "source": "tripadvisor",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 949
+      }
+    ]
   },
   {
     "name": "Costa Nossa",
@@ -2540,7 +2929,25 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Ponta Delgada, São Miguel",
     "city": "Azores",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 8.6,
+        "max_score": 5,
+        "review_count": 1508
+      },
+      {
+        "source": "tripadvisor",
+        "score": 7.8,
+        "max_score": 5,
+        "review_count": 1014
+      }
+    ],
+    "editorial": {
+      "timeOut": true,
+      "pressMentions": 1
+    }
   },
   {
     "name": "Bom Pesqueiro",
@@ -2548,7 +2955,21 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Ponta Delgada, São Miguel",
     "city": "Azores",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 780
+      },
+      {
+        "source": "tripadvisor",
+        "score": 9.4,
+        "max_score": 5,
+        "review_count": 187
+      }
+    ]
   },
   {
     "name": "Quinta dos Sabores",
@@ -2565,7 +2986,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "São Miguel",
     "city": "Azores",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 8.8,
+        "max_score": 5,
+        "review_count": 1200
+      }
+    ]
   },
   {
     "name": "Casa de Pasto o Amaral",
@@ -2606,7 +3035,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "São Miguel",
     "city": "Azores",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.2,
+        "max_score": 5,
+        "review_count": 506
+      }
+    ]
   },
   {
     "name": "Bar Caloura",
@@ -2671,7 +3108,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Barcarena",
     "city": "Oeiras",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 7.6,
+        "max_score": 5,
+        "review_count": 78
+      }
+    ]
   },
   {
     "name": "Taberna da Maré",
@@ -2687,7 +3132,13 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "London",
     "city": "London",
     "region": "abroad",
-    "country": "UK"
+    "country": "UK",
+    "editorial": {
+      "michelinStars": 1,
+      "inMichelinGuide": true,
+      "timeOut": true,
+      "best101": true
+    }
   },
   {
     "name": "Feito no Zambujal",
@@ -2720,7 +3171,11 @@ export const lisbonSeed: SeedRestaurant[] = [
     "city": "Sines",
     "region": "portugal-other",
     "country": "Portugal",
-    "dish_notes": "arroz de peixe"
+    "dish_notes": "arroz de peixe",
+    "editorial": {
+      "inMichelinGuide": true,
+      "repsolSoles": 1
+    }
   },
   {
     "name": "Restaurante Sul",
@@ -2728,7 +3183,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Burgau",
     "city": "Vila do Bispo",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "google",
+        "score": 9.6,
+        "max_score": 5,
+        "review_count": 287
+      }
+    ]
   },
   {
     "name": "Trafaria na Brasa",
@@ -2744,7 +3207,15 @@ export const lisbonSeed: SeedRestaurant[] = [
     "zone": "Setúbal",
     "city": "Setúbal",
     "region": "portugal-other",
-    "country": "Portugal"
+    "country": "Portugal",
+    "ratings": [
+      {
+        "source": "tripadvisor",
+        "score": 9.8,
+        "max_score": 5,
+        "review_count": 59
+      }
+    ]
   },
   {
     "name": "As Colunas",
