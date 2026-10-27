@@ -1,0 +1,5 @@
+{"index": 37, "name": "Restaurante Ramires", "found": true,
+ "google": {"score": 4.3, "count": 6457},
+ "tripadvisor": {"score": 3.8, "count": 1492},
+ "editorial": {"inMichelinGuide": false, "timeOut": false, "best101": false, "pressMentions": 1},
+ "confidence": "medium", "sources": ["https://www.restauranteramires.com", "https://www.restauranteramires.com/historia/"], "notes": "Famous piri-piri chicken restaurant in Guia since 1964; Google 4.3/6000+ confirmed on restaurant website; TripAdvisor 3.8/1492 from prior aggregator data; 1 press mention (ARTE European broadcaster); not in Michelin or Repsol guide"}

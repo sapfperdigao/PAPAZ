@@ -1,0 +1,14 @@
+{
+  "index": 31,
+  "name": "Restaurante Girassol",
+  "found": true,
+  "google": {"score": 4.5, "count": 1166},
+  "tripadvisor": {"score": 4.3, "count": 178},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "medium",
+  "sources": [
+    "https://restaurantguru.com/Girassol-Sarilhos-Grandes",
+    "https://www.girassolrestaurante.pt"
+  ],
+  "notes": "50-year family restaurant at Sarilhos Grandes (Moita area); TripAdvisor Travellers' Choice 2025 winner; Google/TripAdvisor scores via RestaurantGuru aggregator; not in Michelin Guide."
+}

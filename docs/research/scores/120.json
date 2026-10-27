@@ -1,0 +1,4 @@
+{"index": 120, "name": "Restaurante Sul", "found": true,
+ "google": {"score": 4.8, "count": 287},
+ "editorial": {"inMichelinGuide": false, "timeOut": false, "best101": false, "pressMentions": 0},
+ "confidence": "medium", "sources": ["https://www.google.com/maps/search/Restaurante+Sul+Burgau+Portugal"], "notes": "Google Maps 4.8/287 confirmed via Maps search; TripAdvisor and TheFork returned 403; no Michelin or Repsol evidence found for Burgau/Vila do Bispo"}

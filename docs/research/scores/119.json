@@ -1,0 +1,20 @@
+{
+  "index": 119,
+  "name": "Lamelas",
+  "found": true,
+  "editorial": {
+    "michelinStars": 0,
+    "inMichelinGuide": true,
+    "repsolSoles": 1,
+    "timeOut": false,
+    "best101": false,
+    "pressMentions": 0
+  },
+  "confidence": "medium",
+  "sources": [
+    "https://guide.michelin.com/pt/en/restaurants?q=lamelas",
+    "https://guide.michelin.com/pt/en/setubal/porto-covo_2427368/restaurant/lamelas",
+    "https://lamelasrestaurante.com"
+  ],
+  "notes": "In Michelin Guide Portugal (selected, no stars, since 2024) and 1 Sol Repsol (2025); chef Ana Moura; crowd-sourced platforms (Google, TripAdvisor, TheFork) returned 403/blocked."
+}

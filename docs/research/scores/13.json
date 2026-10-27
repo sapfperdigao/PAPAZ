@@ -1,0 +1,5 @@
+{"index": 13, "name": "Kappo", "found": true,
+ "google": {"score": 4.7, "count": 277},
+ "tripadvisor": {"score": 4.4, "count": 54},
+ "editorial": {"michelinStars": 1, "inMichelinGuide": true, "repsolSoles": 1, "timeOut": false, "best101": false, "pressMentions": 2},
+ "confidence": "medium", "sources": ["https://www.restaurantguru.com/Kappo-Cascais", "https://kappo.pt"], "notes": "1 Michelin star + 1 Repsol Sol confirmed 2026 via official site; Google/TripAdvisor ratings via restaurantguru aggregator; TheFork page returned 403."}

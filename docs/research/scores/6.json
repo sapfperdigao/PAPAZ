@@ -1,0 +1,12 @@
+{
+  "index": 6,
+  "name": "Relento",
+  "found": true,
+  "tripadvisor": {"score": 3.7, "count": 455},
+  "confidence": "medium",
+  "sources": [
+    "https://www.tripadvisor.pt/Restaurant_Review-g2315268-d18076527-Reviews-Marisqueira_O_Relento-Alges_Oeiras_Lisbon_District_Central_Portugal.html",
+    "https://www.bing.com/search?q=Relento+marisqueira+Alg%C3%A9s+google+avalia%C3%A7%C3%B5es+nota"
+  ],
+  "notes": "Historic marisqueira since 1961 in Algés; TripAdvisor 3.7/455 confirmed via multiple sources; Sluurpy shows 4.1/7479 (likely Google Maps aggregate, unconfirmed directly); no TheFork profile found; no Michelin/Repsol/editorial mentions confirmed"
+}

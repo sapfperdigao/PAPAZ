@@ -1,0 +1,13 @@
+{
+  "index": 7,
+  "name": "Damasqino",
+  "found": true,
+  "google": {"score": 4.8, "count": 1922},
+  "tripadvisor": {"score": 4.9, "count": 77},
+  "confidence": "medium",
+  "sources": [
+    "https://restaurantguru.com/Damasqino-Almada",
+    "https://damasqino.pt"
+  ],
+  "notes": "Syrian restaurant in Almada (R. Cmte. António Feio 28A); Google 4.8/1922 and TripAdvisor 4.9/77 sourced from restaurantguru.com aggregator; direct TripAdvisor/TheFork access blocked (403); no Michelin/Repsol/editorial mentions found"
+}

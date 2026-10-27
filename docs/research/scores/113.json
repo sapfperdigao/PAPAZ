@@ -1,0 +1,13 @@
+{
+  "index": 113,
+  "name": "Muchacho",
+  "found": true,
+  "tripadvisor": {"score": 3.8, "count": 78},
+  "editorial": {"inMichelinGuide": false},
+  "confidence": "medium",
+  "sources": [
+    "https://www.bing.com/search?q=Muchacho+restaurante+Barcarena+Oeiras+rating+reviews&cc=US&setlang=en-US",
+    "https://guide.michelin.com/en/search?q=Muchacho+Portugal"
+  ],
+  "notes": "Local Portuguese restaurant at Rua António Pereira da Cunha 4, Barcarena 2730-245 Oeiras; TripAdvisor 3.8/5 (78 reviews) sourced from Bing search snippets; Google Maps and TheFork inaccessible; Michelin search confirmed no listing."
+}

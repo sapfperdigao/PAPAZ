@@ -1,0 +1,15 @@
+{
+  "index": 53,
+  "name": "Almina",
+  "found": true,
+  "editorial": {
+    "inMichelinGuide": false
+  },
+  "confidence": "low",
+  "sources": [
+    "https://www.alminacascais.com",
+    "https://www.thefork.pt/restaurante/almina-cascais-r829716",
+    "https://guide.michelin.com/pt/en/restaurants?q=cascais"
+  ],
+  "notes": "Restaurant confirmed at Travessa da Ressureição 4, 2750-476 Cascais; Mediterranean/Levantine cuisine; TheFork-listed (ID r829716) but platform returned 403; not in Michelin Guide for Cascais; Google/TripAdvisor ratings inaccessible due to consent walls and 403 blocks"
+}

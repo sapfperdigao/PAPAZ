@@ -1,0 +1,21 @@
+{
+  "index": 79,
+  "name": "Oficina dos Rissóis",
+  "found": true,
+  "google": {"score": 4.8, "count": 999},
+  "tripadvisor": {"score": 4.9, "count": 286},
+  "editorial": {
+    "inMichelinGuide": false,
+    "timeOut": false,
+    "best101": false,
+    "pressMentions": 3
+  },
+  "confidence": "medium",
+  "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g189180-d21569027-Reviews-Oficina_dos_Rissois-Porto_Porto_District_Northern_Portugal.html",
+    "https://nit.pt/comida-e-bebida/restaurantes/oficina-dos-rissois-este-restaurante-reinventou-o-rissol",
+    "https://www.publico.pt/2019/11/15/fugas/noticia/nesta-oficina-do-porto-o-rissol-e-a-materia-prima",
+    "https://os-melhores-restaurantes.pt/restaurante/oficina-dos-rissois-porto"
+  ],
+  "notes": "Specialty oven-baked rissóis at Passeio de São Lázaro 5A Porto; TripAdvisor 4.9/286 confirmed from multiple searches; Google 4.8/~999 from aggregator (os-melhores-restaurantes.pt); NiT (Mar 2025), Público (Nov 2019), Lifecooler press coverage; not in Michelin Guide; TheFork/OpenTable not found"
+}

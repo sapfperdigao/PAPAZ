@@ -1,0 +1,11 @@
+{
+  "index": 32,
+  "name": "Grelha da Barra",
+  "found": true,
+  "google": {"score": 4.6, "count": 1583},
+  "tripadvisor": {"score": 4.5, "count": 132},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 0},
+  "confidence": "medium",
+  "sources": ["https://www.restaurantguru.com/Grelha-da-Barra-Oeiras"],
+  "notes": "Portuguese grill at R. Afonso de Paiva 3, Oeiras; ratings sourced via RestaurantGuru aggregator (Google+TripAdvisor); no TheFork/OpenTable/Michelin/Repsol/TimeOut presence found."
+}
