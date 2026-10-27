@@ -1,1 +1,14 @@
-{"index": 74, "name": "Deselegante", "found": true, "tripadvisor": {"score": 4.9, "count": 9}, "editorial": {"inMichelinGuide": false, "timeOut": false, "best101": false, "pressMentions": 1}, "confidence": "medium", "sources": ["https://theforkawards.pt/restaurantes/deselegante/", "https://www.bing.com/search?q=Deselegante+Santarém+restaurante&mkt=pt-PT"], "notes": "TripAdvisor 4.9/5 (9 reviews, #39/112 in Santarém); TheFork Awards 2024 nominated; not in Michelin Guide; sharing plates concept by chef Rui Lima Santos at Lg Emilio Inf Da Camara 2, Santarém"}
+{
+  "index": 74,
+  "name": "Deselegante",
+  "found": true,
+  "tripadvisor": {"score": 4.9, "count": 9},
+  "editorial": {"inMichelinGuide": false, "pressMentions": 3},
+  "confidence": "medium",
+  "sources": [
+    "https://www.tripadvisor.com/Restaurant_Review-g189134-d28960571-Reviews-Deselegante-Santarem_Santarem_District_Central_Portugal.html",
+    "https://www.nit.pt/comida/restaurantes/no-deselegante-ha-surpresas-para-picar-todos-os-dias-com-musica-aos-altos-berros",
+    "https://restaurantguru.com/Deselegante-Santarem-r1005793"
+  ],
+  "notes": "Small 34-seat restaurant in Santarém historic centre; Chef Rui Lima Santos; TripAdvisor 4.9/5 (9 reviews), ranked #39 of 112; featured in NIT, Expresso, Mesa Marcada; not in Michelin or Repsol; Google Maps data not confirmed"
+}

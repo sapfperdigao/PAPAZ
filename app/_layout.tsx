@@ -3,10 +3,13 @@ import { useEffect } from 'react';
 import { Pressable, Text } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Stack, useRouter } from 'expo-router';
+import { useFonts } from 'expo-font';
+import { useColorScheme } from 'nativewind';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@/query/client';
 import { getDb } from '@/db/client';
 import { seedIfEmpty } from '@/db/seed';
+import { FONT_MAP } from '@/theme/fonts';
 
 function EditButton({ id }: { id?: string }) {
   const router = useRouter();
@@ -15,15 +18,27 @@ function EditButton({ id }: { id?: string }) {
     <Pressable
       onPress={() => router.push({ pathname: '/restaurant/edit/[id]', params: { id } })}
       className="px-2"
+      accessibilityRole="button"
+      accessibilityLabel="Edit restaurant"
     >
-      <Text className="text-2xl text-amber-600">⋯</Text>
+      <Text className="text-2xl text-accent dark:text-accent-dark">⋯</Text>
     </Pressable>
   );
 }
 
 export default function RootLayout() {
-  // Seed the built-in sample on first launch, then refresh any list queries.
-  // getDb() opens synchronously and applies pending migrations on first call.
+  // Editorial type pairing — preload before first render so there is no flash of
+  // unstyled text (DESIGN_PLAN §2.2). getDb() is synchronous, so the DB needs no
+  // separate ready-gate; seeding runs in the background and invalidates queries.
+  const [fontsLoaded] = useFonts(FONT_MAP);
+  const { setColorScheme } = useColorScheme();
+
+  // darkMode:'class' renders light until setColorScheme runs (DESIGN_PLAN §3.2).
+  // Default to 'system' (follow the OS); light is the authored hero theme.
+  useEffect(() => {
+    setColorScheme('system');
+  }, [setColorScheme]);
+
   useEffect(() => {
     seedIfEmpty(getDb())
       .then((n) => {
@@ -32,8 +47,10 @@ export default function RootLayout() {
       .catch(() => {});
   }, []);
 
+  if (!fontsLoaded) return null;
+
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView className="flex-1 bg-base dark:bg-base-dark">
       <QueryClientProvider client={queryClient}>
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" />

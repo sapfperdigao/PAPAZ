@@ -19,7 +19,17 @@ module.exports = {
         danger: { DEFAULT: '#DC2626', dark: '#F87171' },
       },
       borderRadius: { card: '16px', badge: '8px', button: '12px', pill: '9999px' },
-      fontFamily: { serif: ['Fraunces'], sans: ['Inter'] },
+      // Keys map to the exact family names registered in src/theme/fonts.ts.
+      // Use font-serif* for display, font-sans* for body/UI, at explicit weights.
+      fontFamily: {
+        serif: ['Fraunces'],
+        'serif-semibold': ['Fraunces-SemiBold'],
+        'serif-bold': ['Fraunces-Bold'],
+        sans: ['Inter'],
+        'sans-medium': ['Inter-Medium'],
+        'sans-semibold': ['Inter-SemiBold'],
+        'sans-bold': ['Inter-Bold'],
+      },
     },
   },
   plugins: [],
