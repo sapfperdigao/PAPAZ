@@ -1,8 +1,10 @@
-import json, re, unicodedata
+import json, re, unicodedata, os, glob
 
-NORM = "/Users/I335997/FP_Labs/restaurant-app/docs/research/eat-list-normalized.json"
-MD   = "/Users/I335997/FP_Labs/Lisbon_Restaurant_Ratings.md"
-OUT  = "/Users/I335997/FP_Labs/restaurant-app/src/db/seeds/lisbon-restaurants.ts"
+NORM       = "/Users/I335997/FP_Labs/restaurant-app/docs/research/eat-list-normalized.json"
+MD         = "/Users/I335997/FP_Labs/Lisbon_Restaurant_Ratings.md"
+NR_FILE    = "/Users/I335997/FP_Labs/restaurant-app/docs/research/needs-research.json"
+SCORES_DIR = "/Users/I335997/FP_Labs/restaurant-app/docs/research/scores"
+OUT        = "/Users/I335997/FP_Labs/restaurant-app/src/db/seeds/lisbon-restaurants.ts"
 
 def norm_name(s):
     s = s or ""
@@ -50,6 +52,37 @@ for line in body.splitlines():
     m = re.match(r"\|\s*\*\*\d\.\d\*\*\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*$", line)
     if m: md_text[norm_name(m.group(1))] = m.group(1) + " " + m.group(4)
 
+# Research scores map: norm_name -> score_data from workflow output
+nr_data = json.load(open(NR_FILE))
+research_map = {}
+loaded = 0
+for fn in sorted(glob.glob(os.path.join(SCORES_DIR, "*.json")), key=lambda p: int(os.path.basename(p).replace(".json", ""))):
+    try:
+        s = json.load(open(fn))
+        idx = s.get("index")
+        if idx is None or idx >= len(nr_data): continue
+        nr_name = nr_data[idx]["name"]
+        research_map[norm_name(nr_name)] = s
+        loaded += 1
+    except Exception as exc:
+        print(f"  warn: {fn}: {exc}")
+print(f"loaded {loaded} research score files")
+
+def parse_research_ratings(s):
+    """Convert research score file to [(source, raw, max_score, count)] list."""
+    out = []
+    for src, mx in [("google", 5), ("tripadvisor", 5), ("opentable", 5), ("thefork", 10)]:
+        entry = s.get(src)
+        if entry and isinstance(entry, dict) and "score" in entry:
+            cnt = entry.get("count")
+            out.append((src, float(entry["score"]), mx, cnt))
+    return out
+
+def parse_research_editorial(s):
+    """Extract non-falsy editorial signals from score file."""
+    raw = s.get("editorial") or {}
+    return {k: v for k, v in raw.items() if v is not None and v is not False and v != 0}
+
 def infer_category(name):
     n = name.lower()
     if "cervejaria" in n: return "cervejaria"
@@ -59,7 +92,10 @@ def infer_category(name):
 
 data = json.load(open(NORM))
 entries = []
-scored = 0
+scored_md = 0
+scored_research = 0
+unscored = 0
+
 for x in data:
     if x.get("status") in ("closed", "not-a-restaurant"): continue
     name = x["name"]
@@ -67,17 +103,40 @@ for x in data:
     zone = x.get("area") or x.get("city") or None
     ks = x.get("existing_key_scores")
     ratings = []
+
+    # 1. Scores from the curated .md (highest fidelity, already human-verified)
     if ks:
         for src, raw, mx, cnt in parse_sources(ks):
             r = {"source": src, "score": round(raw * (10.0 / mx), 2), "max_score": mx}
             if cnt is not None: r["review_count"] = cnt
             ratings.append(r)
-    # editorial from matching .md notes
+
+    # 2. Editorial from matching .md notes
     ed = {}
     for cand in [name] + x.get("aliases", []):
         t = md_text.get(norm_name(cand))
         if t: ed = parse_editorial(t); break
-    if ratings or ed: scored += 1
+
+    # 3. Researched scores (for restaurants without .md ratings)
+    if not ratings:
+        for cand in [name] + x.get("aliases", []):
+            rd = research_map.get(norm_name(cand))
+            if rd and rd.get("found") and rd.get("confidence") in ("high", "medium"):
+                for src, raw, mx, cnt in parse_research_ratings(rd):
+                    r = {"source": src, "score": round(raw * (10.0 / mx), 2), "max_score": mx}
+                    if cnt is not None: r["review_count"] = cnt
+                    ratings.append(r)
+                if not ed:
+                    ed = parse_research_editorial(rd)
+                break
+
+    if ratings and ks:
+        scored_md += 1
+    elif ratings:
+        scored_research += 1
+    else:
+        unscored += 1
+
     e = {"name": name, "category": cat}
     if zone: e["zone"] = zone
     if x.get("city"): e["city"] = x["city"]
@@ -113,11 +172,10 @@ export interface SeedRestaurant {
   editorial?: EditorialSignals;
 }
 
-// Generated from the user's curated eat-list + Lisbon_Restaurant_Ratings.md
-// (docs/research/gen_seed.py). Ratings are derived from the .md's per-source
-// key scores; editorial from its notes. Restaurants without ratings are the
-// ones still pending web research.
+// Generated from the user\'s curated eat-list + Lisbon_Restaurant_Ratings.md
+// (docs/research/gen_seed.py). MD scores = human-verified; research scores =
+// web-researched via workflow agents. Restaurants without ratings are unscored.
 export const lisbonSeed: SeedRestaurant[] = '''
 
 open(OUT, "w").write(hdr + json.dumps(entries, ensure_ascii=False, indent=2) + ";\n")
-print(f"wrote {len(entries)} restaurants ({scored} with ratings/editorial) -> {OUT}")
+print(f"wrote {len(entries)} restaurants  (md={scored_md} research={scored_research} unscored={unscored}) -> {OUT}")
