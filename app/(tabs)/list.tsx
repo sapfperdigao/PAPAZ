@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { View, Text, TextInput, Pressable, FlatList } from 'react-native';
+import { View, Text, TextInput, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { RestaurantCard } from '@/components/RestaurantCard';
+import { Chip } from '@/components/ui';
 import { useRestaurants } from '@/hooks/useRestaurants';
 import { useUiStore } from '@/store/ui';
 import { useLocation } from '@/hooks/useLocation';
@@ -24,29 +25,6 @@ const VISITED: { key: VisitedFilter; label: string }[] = [
   { key: 'visited', label: 'Visited' },
   { key: 'unvisited', label: 'Unvisited' },
 ];
-
-function Chip({
-  label,
-  active,
-  onPress,
-}: {
-  label: string;
-  active: boolean;
-  onPress: () => void;
-}) {
-  return (
-    <Pressable
-      onPress={onPress}
-      className={`rounded-full border px-3 py-1 ${
-        active ? 'border-amber-500 bg-amber-500' : 'border-neutral-300 dark:border-neutral-700'
-      }`}
-    >
-      <Text className={active ? 'text-xs font-semibold text-black' : 'text-xs text-neutral-500'}>
-        {label}
-      </Text>
-    </Pressable>
-  );
-}
 
 export default function ListScreen() {
   const router = useRouter();
