@@ -5,22 +5,26 @@ describe('restaurantTile', () => {
     expect(restaurantTile('abc', 'tasca')).toEqual(restaurantTile('abc', 'tasca'));
   });
 
-  it('derives tint from the category', () => {
-    expect(restaurantTile('x', 'cervejaria').tint).toBe('#1446C8');
-    expect(restaurantTile('x', 'tasca').tint).toBe('#F4B740');
-    expect(restaurantTile('x', 'marisqueira').tint).toBe('#6FA8FF');
-    expect(restaurantTile('x', 'other').tint).toBe('#64748B');
+  it('derives a vibrant tint from the id, varying across ids', () => {
+    const allowed = ['#1446C8', '#2E8B9A', '#7C3AED', '#C98A1E', '#2E6BE0', '#B23A8E'];
+    expect(allowed).toContain(restaurantTile('abc', 'tasca').tint);
+    const tints = new Set(
+      ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].map((i) => restaurantTile(i, 'other').tint),
+    );
+    expect(tints.size).toBeGreaterThan(1);
+  });
+
+  it('tint depends on the id, not the category', () => {
+    expect(restaurantTile('abc', 'tasca').tint).toBe(restaurantTile('abc', 'other').tint);
   });
 
   it('always uses the porcelain background', () => {
     expect(restaurantTile('abc', 'tasca').bg).toBe('#F3F6FC');
   });
 
-  it('falls back to the "other" tint for an unknown category, never throws', () => {
+  it('handles an unknown category without throwing', () => {
     // @ts-expect-error exercising a bad runtime value
     expect(() => restaurantTile('x', 'nope')).not.toThrow();
-    // @ts-expect-error
-    expect(restaurantTile('x', 'nope').tint).toBe('#64748B');
   });
 
   it('picks a motif that varies across ids', () => {

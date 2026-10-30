@@ -16,14 +16,19 @@ export interface Tile {
 
 const MOTIFS: TileMotif[] = ['quatrefoil', 'star', 'wave'];
 
-// Saturated tints (deeper than the light category-badge hues) so the motif
-// reads over porcelain. Pinned by the spec.
-const TINT: Record<Category, string> = {
-  tasca: '#F4B740',
-  cervejaria: '#1446C8',
-  marisqueira: '#6FA8FF',
-  other: '#64748B',
-};
+// Vibrant jewel-tone tints — every restaurant gets a colourful tile regardless
+// of category (the dataset is mostly "other", so a category→tint map would make
+// most tiles grey and defeat the "colourful, alive" goal). Category is still
+// communicated by the badge, not the tile. All saturated enough to read as a
+// motif over porcelain.
+const TINTS = [
+  '#1446C8', // cobalt
+  '#2E8B9A', // teal
+  '#7C3AED', // plum
+  '#C98A1E', // amber-gold
+  '#2E6BE0', // azure
+  '#B23A8E', // raspberry
+];
 
 const BG = '#F3F6FC';
 
@@ -36,10 +41,12 @@ export function hashString(s: string): number {
   return h >>> 0;
 }
 
+// Deterministic from the id: tint from the jewel-tone set; motif seeded by
+// category+id so same-colour neighbours still differ in pattern.
 export function restaurantTile(id: string, category: Category): Tile {
   return {
-    motif: MOTIFS[hashString(id) % MOTIFS.length],
-    tint: TINT[category] ?? TINT.other,
+    motif: MOTIFS[hashString(category + id) % MOTIFS.length],
+    tint: TINTS[hashString(id) % TINTS.length],
     bg: BG,
   };
 }
