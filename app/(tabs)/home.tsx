@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, FlatList } from 'react-native';
-import Animated, { FadeIn } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeInDown, useReducedMotion } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import {
@@ -17,6 +17,7 @@ import {
   SkeletonList,
 } from '@/components/ui';
 import { RestaurantCard } from '@/components/RestaurantCard';
+import { TileHero, TileThumb } from '@/components/Azulejo';
 import { useCatalog, useRecentVisits, deriveStats } from '@/hooks/useHome';
 import { useUiStore } from '@/store/ui';
 import { useThemeColors } from '@/hooks/useThemeColors';
@@ -31,23 +32,26 @@ const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 
 function FeaturedCard({ item, onPress }: { item: RestaurantListItem; onPress: () => void }) {
   return (
-    <Card onPress={onPress} accessibilityLabel={item.name} className="w-44">
-      <View className="flex-row items-start justify-between">
-        <Text
-          numberOfLines={2}
-          className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark"
-        >
-          {item.name}
-        </Text>
-        {item.consensus != null ? <ConsensusBadge score={item.consensus} className="ml-2" /> : null}
-      </View>
-      {item.zone ? (
-        <Text numberOfLines={1} className="mt-1 font-sans text-xs text-muted dark:text-muted-dark">
-          {item.zone}
-        </Text>
-      ) : null}
-      <View className="mt-2">
-        <Badge label={cap(item.category)} color={tokens.category[item.category]} />
+    <Card onPress={onPress} accessibilityLabel={item.name} className="w-44 overflow-hidden p-0">
+      <TileHero id={item.id} category={item.category} height={88} />
+      <View className="p-3">
+        <View className="flex-row items-start justify-between">
+          <Text
+            numberOfLines={2}
+            className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark"
+          >
+            {item.name}
+          </Text>
+          {item.consensus != null ? <ConsensusBadge score={item.consensus} className="ml-2" /> : null}
+        </View>
+        {item.zone ? (
+          <Text numberOfLines={1} className="mt-1 font-sans text-xs text-muted dark:text-muted-dark">
+            {item.zone}
+          </Text>
+        ) : null}
+        <View className="mt-2">
+          <Badge label={cap(item.category)} color={tokens.category[item.category]} />
+        </View>
       </View>
     </Card>
   );
@@ -60,17 +64,25 @@ function RecentVisitRow({ visit, onPress }: { visit: RecentVisit; onPress: () =>
   });
   return (
     <Card onPress={onPress} accessibilityLabel={visit.restaurantName} className="mb-2">
-      <View className="flex-row items-center justify-between">
-        <Text className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark">
-          {visit.restaurantName}
-        </Text>
-        <Text className="ml-2 font-sans text-xs text-muted dark:text-muted-dark">{date}</Text>
+      <View className="flex-row items-center gap-3">
+        <TileThumb id={visit.restaurantId} category="other" size={44} />
+        <View className="flex-1">
+          <View className="flex-row items-center justify-between">
+            <Text
+              numberOfLines={1}
+              className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark"
+            >
+              {visit.restaurantName}
+            </Text>
+            <Text className="ml-2 font-sans text-xs text-muted dark:text-muted-dark">{date}</Text>
+          </View>
+          {visit.personalNotes ? (
+            <Text numberOfLines={2} className="mt-1 font-sans text-sm text-muted dark:text-muted-dark">
+              {visit.personalNotes}
+            </Text>
+          ) : null}
+        </View>
       </View>
-      {visit.personalNotes ? (
-        <Text numberOfLines={2} className="mt-1 font-sans text-sm text-muted dark:text-muted-dark">
-          {visit.personalNotes}
-        </Text>
-      ) : null}
     </Card>
   );
 }
@@ -83,6 +95,7 @@ function RecentVisitRow({ visit, onPress }: { visit: RecentVisit; onPress: () =>
 export default function HomeScreen() {
   const router = useRouter();
   const c = useThemeColors();
+  const reduced = useReducedMotion();
   const { setFilters, setSearch, resetFilters, setSort } = useUiStore();
   const [q, setQ] = useState('');
   const catalog = useCatalog();
@@ -115,20 +128,28 @@ export default function HomeScreen() {
   return (
     <ScreenContainer padded={false}>
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-        <Animated.View entering={FadeIn.duration(250)} className="px-4 pb-10">
-          {/* Hero */}
-          <View className="pt-2">
-            <Text className="font-sans text-sm text-muted dark:text-muted-dark">{greeting()}</Text>
-            <Text
-              maxFontSizeMultiplier={1.3}
-              className="font-serif-bold text-4xl tracking-tight text-ink dark:text-ink-dark"
-            >
-              PAPAZ
-            </Text>
-            <Text className="mt-0.5 font-sans text-sm text-muted dark:text-muted-dark">
-              {COPY.tagline}
-            </Text>
-            <View className="mt-3 flex-row items-center rounded-pill border border-black/10 bg-surface px-4 dark:border-white/10 dark:bg-surface-dark">
+        <Animated.View entering={FadeIn.duration(250)} className="pb-10">
+          {/* Full-bleed cobalt tile hero */}
+          <View className="overflow-hidden rounded-b-card">
+            <TileHero id="papaz" category="cervejaria" height={168} bg="#1446C8" tint="#3D6BE5" />
+            <View className="absolute inset-0 justify-end px-4 pb-5">
+              <Text className="font-sans text-sm text-white/80">{greeting()}</Text>
+              <View className="flex-row items-end">
+                <Text
+                  maxFontSizeMultiplier={1.2}
+                  className="font-serif-black text-5xl tracking-tight text-white"
+                >
+                  PAPAZ
+                </Text>
+                <View className="mb-3 ml-1.5 h-2.5 w-2.5 rounded-sm bg-nata" />
+              </View>
+              <Text className="mt-0.5 font-sans text-sm text-white/80">{COPY.tagline}</Text>
+            </View>
+          </View>
+
+          <View className="px-4">
+            {/* Search — floats up over the hero's bottom edge */}
+            <View className="-mt-5 flex-row items-center rounded-pill border border-black/10 bg-surface px-4 shadow-sm dark:border-white/10 dark:bg-surface-dark">
               <Ionicons name="search" size={18} color={c.muted} />
               <TextInput
                 value={q}
@@ -141,7 +162,6 @@ export default function HomeScreen() {
                 className="ml-2 flex-1 py-3 font-sans text-ink dark:text-ink-dark"
               />
             </View>
-          </View>
 
           {/* Stat strip — onboarding nudge when there's no engagement yet */}
           <View className="mt-5 rounded-card border border-black/5 bg-surface py-4 dark:border-white/10 dark:bg-surface-dark">
@@ -186,8 +206,12 @@ export default function HomeScreen() {
                 keyExtractor={(r) => r.id}
                 showsHorizontalScrollIndicator={false}
                 ItemSeparatorComponent={() => <View className="w-3" />}
-                renderItem={({ item }) => (
-                  <FeaturedCard item={item} onPress={() => openRestaurant(item.id)} />
+                renderItem={({ item, index }) => (
+                  <Animated.View
+                    entering={reduced ? undefined : FadeInDown.delay(index * 60).duration(300)}
+                  >
+                    <FeaturedCard item={item} onPress={() => openRestaurant(item.id)} />
+                  </Animated.View>
                 )}
               />
             )}
@@ -263,6 +287,7 @@ export default function HomeScreen() {
               ))
             )}
           </View>
+        </View>
         </Animated.View>
       </ScrollView>
     </ScreenContainer>

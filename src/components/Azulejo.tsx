@@ -77,10 +77,14 @@ export function TileThumb({
   id,
   category,
   size = 48,
+  tint,
+  bg,
 }: {
   id: string;
   category: Category;
   size?: number;
+  tint?: string;
+  bg?: string;
 }) {
   const t = restaurantTile(id, category);
   return (
@@ -89,7 +93,7 @@ export function TileThumb({
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants"
     >
-      <TileSvg motif={t.motif} tint={t.tint} bg={t.bg} width={size} height={size} />
+      <TileSvg motif={t.motif} tint={tint ?? t.tint} bg={bg ?? t.bg} width={size} height={size} />
     </View>
   );
 }
@@ -98,10 +102,14 @@ export function TileHero({
   id,
   category,
   height = 140,
+  tint,
+  bg,
 }: {
   id: string;
   category: Category;
   height?: number;
+  tint?: string;
+  bg?: string;
 }) {
   const t = restaurantTile(id, category);
   return (
@@ -110,7 +118,7 @@ export function TileHero({
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants"
     >
-      <TileSvg motif={t.motif} tint={t.tint} bg={t.bg} width={2000} height={height} />
+      <TileSvg motif={t.motif} tint={tint ?? t.tint} bg={bg ?? t.bg} width={2000} height={height} />
     </View>
   );
 }
