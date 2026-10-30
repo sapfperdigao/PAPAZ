@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { RestaurantCard } from '@/components/RestaurantCard';
 import { ScreenContainer, Chip, EmptyState, ErrorState, SkeletonList } from '@/components/ui';
 import { useRestaurants } from '@/hooks/useRestaurants';
+import { useToggleBookmark } from '@/hooks/useToggleBookmark';
 import { bookmarkSubfilter, type BookmarkMode } from '@/db/repo';
 
 const MODES: { key: BookmarkMode; label: string }[] = [
@@ -15,6 +16,7 @@ const MODES: { key: BookmarkMode; label: string }[] = [
 export default function BookmarksScreen() {
   const router = useRouter();
   const [mode, setMode] = useState<BookmarkMode>('all');
+  const toggleBookmark = useToggleBookmark();
   const { data: bookmarked = [], isLoading, isError, refetch } = useRestaurants({
     bookmarkedOnly: true,
   });
@@ -45,6 +47,7 @@ export default function BookmarksScreen() {
               onPress={() =>
                 router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
               }
+              onToggleBookmark={() => toggleBookmark(item)}
             />
           )}
           ListEmptyComponent={
