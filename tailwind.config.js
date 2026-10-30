@@ -22,11 +22,12 @@ module.exports = {
       },
       borderRadius: { card: '14px', badge: '8px', button: '12px', pill: '9999px' },
       // Keys map to the exact family names registered in src/theme/fonts.ts.
-      // Use font-serif* for display, font-sans* for body/UI, at explicit weights.
+      // `serif*` is repointed at Archivo (editorial display); font-sans* = body/UI.
       fontFamily: {
-        serif: ['Fraunces'],
-        'serif-semibold': ['Fraunces-SemiBold'],
-        'serif-bold': ['Fraunces-Bold'],
+        serif: ['Archivo'],
+        'serif-semibold': ['Archivo-SemiBold'],
+        'serif-bold': ['Archivo-Bold'],
+        'serif-black': ['Archivo-ExtraBold'],
         sans: ['Inter'],
         'sans-medium': ['Inter-Medium'],
         'sans-semibold': ['Inter-SemiBold'],

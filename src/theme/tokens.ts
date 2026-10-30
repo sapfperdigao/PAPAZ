@@ -62,6 +62,6 @@ export const tokens = {
   spacing: (n: number) => n * 4,
   // Crisper than before (cards 14) to echo tiles; pills stay full-round.
   radius: { card: 14, badge: 8, button: 12, pill: 9999 },
-  // Editorial type pairing — display swapped to Archivo in Task 2 (fonts.ts).
-  fontFamily: { serif: 'Fraunces', sans: 'Inter' },
+  // Editorial type pairing — Archivo display (Task 2), Inter body.
+  fontFamily: { serif: 'Archivo', sans: 'Inter' },
 } as const;
