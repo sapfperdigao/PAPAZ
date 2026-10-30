@@ -5,7 +5,7 @@ exports[`ui primitive kit Badge renders a filled category color and an outline v
   className="self-start rounded-badge px-2 py-0.5"
   style={
     {
-      "backgroundColor": "#E8A838",
+      "backgroundColor": "#F4B740",
     }
   }
   testID="b"

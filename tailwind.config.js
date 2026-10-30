@@ -9,16 +9,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        base: { DEFAULT: '#FAF7F2', dark: '#0C0A09' },
-        surface: { DEFAULT: '#FFFFFF', dark: '#1C1917' },
-        ink: { DEFAULT: '#1C1917', dark: '#FAFAF9' },
-        muted: { DEFAULT: '#6B6660', dark: '#A8A29E' },
-        accent: { DEFAULT: '#C2410C', dark: '#EA580C' },
-        'accent-fg': { DEFAULT: '#FFFFFF', dark: '#1C1917' },
-        secondary: { DEFAULT: '#0F766E', dark: '#2DD4BF' },
+        base: { DEFAULT: '#F3F6FC', dark: '#070D1F' },
+        surface: { DEFAULT: '#FFFFFF', dark: '#111A33' },
+        ink: { DEFAULT: '#0A1A3F', dark: '#EAF0FB' },
+        muted: { DEFAULT: '#5B6B8C', dark: '#9DB0D6' },
+        accent: { DEFAULT: '#1446C8', dark: '#6FA8FF' },
+        'accent-fg': { DEFAULT: '#FFFFFF', dark: '#0A1A3F' },
+        secondary: { DEFAULT: '#1F7A8C', dark: '#67E8F9' },
         danger: { DEFAULT: '#DC2626', dark: '#F87171' },
+        nata: { DEFAULT: '#F4B740', dark: '#F4B740' },
+        ceu: { DEFAULT: '#6FA8FF', dark: '#6FA8FF' },
       },
-      borderRadius: { card: '16px', badge: '8px', button: '12px', pill: '9999px' },
+      borderRadius: { card: '14px', badge: '8px', button: '12px', pill: '9999px' },
       // Keys map to the exact family names registered in src/theme/fonts.ts.
       // Use font-serif* for display, font-sans* for body/UI, at explicit weights.
       fontFamily: {
