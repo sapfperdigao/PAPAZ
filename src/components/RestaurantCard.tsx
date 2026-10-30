@@ -21,88 +21,90 @@ export function RestaurantCard({
   const c = useThemeColors();
   const bookmarked = item.bookmarked === 1;
   return (
-    <Card testID="restaurant-card" onPress={onPress} accessibilityLabel={item.name} className="mb-2">
+    <Card testID="restaurant-card" className="mb-2">
       <View className="flex-row items-center gap-3">
-        <TileThumb id={item.id} category={item.category} size={48} />
+        <Pressable
+          onPress={onPress}
+          accessibilityRole="button"
+          accessibilityLabel={item.name}
+          className="flex-1 flex-row items-center gap-3"
+        >
+          <TileThumb id={item.id} category={item.category} size={48} />
 
-        <View className="flex-1">
-          <View className="flex-row items-center justify-between">
-            <Text
-              numberOfLines={1}
-              className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark"
-            >
-              {item.name}
-            </Text>
-            {item.consensus != null ? (
-              <ConsensusBadge score={item.consensus} className="ml-2" />
-            ) : null}
-            {onToggleBookmark ? (
-              <Pressable
-                testID="bookmark-toggle"
-                onPress={onToggleBookmark}
-                accessibilityRole="button"
-                accessibilityState={{ selected: bookmarked }}
-                accessibilityLabel={bookmarked ? 'Remove bookmark' : 'Bookmark'}
-                hitSlop={8}
-                className="ml-1.5 p-0.5"
+          <View className="flex-1">
+            <View className="flex-row items-center justify-between">
+              <Text
+                numberOfLines={1}
+                className="flex-1 font-serif-semibold text-base text-ink dark:text-ink-dark"
               >
-                <Ionicons
-                  name={bookmarked ? 'bookmark' : 'bookmark-outline'}
-                  size={18}
-                  color={bookmarked ? c.accent : c.muted}
-                />
-              </Pressable>
-            ) : bookmarked ? (
-              <Ionicons
-                name="bookmark"
-                size={16}
-                color={c.accent}
-                style={{ marginLeft: 6 }}
-                accessibilityLabel="Bookmarked"
-              />
-            ) : null}
-          </View>
-
-          {item.zone ? (
-            <Text
-              numberOfLines={1}
-              className="mt-0.5 font-sans text-xs text-muted dark:text-muted-dark"
-            >
-              {item.zone}
-            </Text>
-          ) : null}
-
-          <View className="mt-2 flex-row items-center gap-2">
-            <CategoryBadge category={item.category} />
-            {item.price_range ? <PriceBadge price={item.price_range} /> : null}
-
-            <View
-              testID="card-stars"
-              className="flex-row items-center"
-              style={{ opacity: item.visited ? 1 : 0.4 }}
-            >
-              <Ionicons name="star" size={13} color={c.accent} />
-              <Text className="ml-0.5 font-sans text-xs text-muted dark:text-muted-dark">
-                {stars != null ? stars.toFixed(1) : '—'}
+                {item.name}
               </Text>
+              {item.consensus != null ? (
+                <ConsensusBadge score={item.consensus} className="ml-2" />
+              ) : null}
             </View>
 
-            {item.visited === 1 ? (
-              <Ionicons
-                name="checkmark-circle"
-                size={14}
-                color={c.secondary}
-                accessibilityLabel="Visited"
-              />
-            ) : null}
-
-            {item.distanceKm != null ? (
-              <Text className="ml-auto font-sans text-xs text-muted dark:text-muted-dark">
-                {formatDistance(item.distanceKm)}
+            {item.zone ? (
+              <Text
+                numberOfLines={1}
+                className="mt-0.5 font-sans text-xs text-muted dark:text-muted-dark"
+              >
+                {item.zone}
               </Text>
             ) : null}
+
+            <View className="mt-2 flex-row items-center gap-2">
+              <CategoryBadge category={item.category} />
+              {item.price_range ? <PriceBadge price={item.price_range} /> : null}
+
+              <View
+                testID="card-stars"
+                className="flex-row items-center"
+                style={{ opacity: item.visited ? 1 : 0.4 }}
+              >
+                <Ionicons name="star" size={13} color={c.accent} />
+                <Text className="ml-0.5 font-sans text-xs text-muted dark:text-muted-dark">
+                  {stars != null ? stars.toFixed(1) : '—'}
+                </Text>
+              </View>
+
+              {item.visited === 1 ? (
+                <Ionicons
+                  name="checkmark-circle"
+                  size={14}
+                  color={c.secondary}
+                  accessibilityLabel="Visited"
+                />
+              ) : null}
+
+              {item.distanceKm != null ? (
+                <Text className="ml-auto font-sans text-xs text-muted dark:text-muted-dark">
+                  {formatDistance(item.distanceKm)}
+                </Text>
+              ) : null}
+            </View>
           </View>
-        </View>
+        </Pressable>
+
+        {onToggleBookmark ? (
+          <Pressable
+            testID="bookmark-toggle"
+            onPress={onToggleBookmark}
+            accessibilityRole="button"
+            accessibilityState={{ selected: bookmarked }}
+            accessibilityLabel={bookmarked ? 'Remove bookmark' : 'Bookmark'}
+            hitSlop={8}
+            className="p-1"
+          >
+            <Ionicons
+              name={bookmarked ? 'bookmark' : 'bookmark-outline'}
+              size={20}
+              color={bookmarked ? c.accent : c.muted}
+            />
+          </Pressable>
+        ) : bookmarked ? (
+          <Ionicons name="bookmark" size={16} color={c.accent} accessibilityLabel="Bookmarked" />
+        ) : null}
       </View>
     </Card>
   );

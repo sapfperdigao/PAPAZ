@@ -8,6 +8,7 @@ import { useRestaurants } from '@/hooks/useRestaurants';
 import { useUiStore } from '@/store/ui';
 import { useLocation } from '@/hooks/useLocation';
 import { useThemeColors } from '@/hooks/useThemeColors';
+import { useToggleBookmark } from '@/hooks/useToggleBookmark';
 import type { SortKey } from '@/db/repo';
 
 const SORTS: { key: SortKey; label: string }[] = [
@@ -23,6 +24,7 @@ export default function ListScreen() {
   const c = useThemeColors();
   const { sort, filters, setSort, setSearch } = useUiStore();
   const location = useLocation();
+  const toggleBookmark = useToggleBookmark();
 
   const origin = sort === 'distance' && location.coords ? location.coords : undefined;
   const { data: items = [], isLoading, isError, refetch } = useRestaurants(
@@ -100,6 +102,7 @@ export default function ListScreen() {
               onPress={() =>
                 router.push({ pathname: '/restaurant/[id]/overview', params: { id: item.id } })
               }
+              onToggleBookmark={() => toggleBookmark(item)}
             />
           )}
           ListEmptyComponent={
