@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import { RestaurantCard } from '../RestaurantCard';
 import type { RestaurantListItem } from '@/db/repo';
 
@@ -55,5 +55,23 @@ describe('RestaurantCard', () => {
       <RestaurantCard item={makeItem({ visited: 1, personalRating: 4 })} />,
     );
     expect(flatStyle(getByTestId('card-stars')).opacity).toBe(1);
+  });
+
+  it('keeps the score visible and truncates a very long name', () => {
+    const longName = 'A'.repeat(80);
+    const { getByText, getByTestId } = render(
+      <RestaurantCard item={makeItem({ name: longName, consensus: 8.6 })} />,
+    );
+    expect(getByTestId('consensus-badge')).toBeTruthy();
+    expect(getByText(longName).props.numberOfLines).toBeGreaterThanOrEqual(1);
+  });
+
+  it('fires onToggleBookmark when the bookmark control is pressed', () => {
+    const onToggleBookmark = jest.fn();
+    const { getByTestId } = render(
+      <RestaurantCard item={makeItem({ bookmarked: 0 })} onToggleBookmark={onToggleBookmark} />,
+    );
+    fireEvent.press(getByTestId('bookmark-toggle'));
+    expect(onToggleBookmark).toHaveBeenCalledTimes(1);
   });
 });

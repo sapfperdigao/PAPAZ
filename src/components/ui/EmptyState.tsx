@@ -1,9 +1,11 @@
 import { View, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Button } from './Button';
+import { useThemeColors } from '@/hooks/useThemeColors';
 
 // Success-but-no-data state: icon + headline + body + optional CTA (DESIGN_PLAN
-// §4). Distinct from loading (Skeleton) and failure (ErrorState).
+// §4). Distinct from loading (Skeleton) and failure (ErrorState). The icon takes
+// the brand accent (cobalt/céu) — an empty screen is an invitation to act.
 export function EmptyState({
   icon = 'restaurant-outline',
   title,
@@ -19,9 +21,10 @@ export function EmptyState({
   onAction?: () => void;
   testID?: string;
 }) {
+  const c = useThemeColors();
   return (
     <View testID={testID} className="items-center px-6 py-10">
-      <Ionicons name={icon} size={40} color="#A8A29E" />
+      <Ionicons name={icon} size={40} color={c.accent} />
       <Text className="mt-3 text-center font-serif-semibold text-base text-ink dark:text-ink-dark">
         {title}
       </Text>

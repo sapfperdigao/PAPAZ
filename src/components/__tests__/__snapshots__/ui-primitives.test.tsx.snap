@@ -14,7 +14,7 @@ exports[`ui primitive kit Badge renders a filled category color and an outline v
     className="font-sans-semibold text-xs"
     style={
       {
-        "color": "#1C1917",
+        "color": "#0A1A3F",
       }
     }
   >
@@ -255,11 +255,11 @@ exports[`ui primitive kit Chip reflects active state for a11y and fires onPress:
 exports[`ui primitive kit ConsensusBadge formats the score and labels itself: consensus-badge 1`] = `
 <View
   accessibilityLabel="Consensus score 8.5 out of 10"
-  className="self-start rounded-badge bg-ink px-1.5 py-0.5 dark:bg-ink-dark"
+  className="self-start rounded-badge bg-nata px-1.5 py-0.5"
   testID="consensus-badge"
 >
   <Text
-    className="font-sans-bold text-xs text-base dark:text-base-dark"
+    className="font-sans-bold text-xs text-ink"
   >
     8.5
   </Text>

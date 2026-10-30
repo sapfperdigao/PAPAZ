@@ -22,7 +22,7 @@ export function Badge({
         className={cn('self-start rounded-badge px-2 py-0.5', className)}
         style={{ backgroundColor: color }}
       >
-        <Text className="font-sans-semibold text-xs" style={{ color: '#1C1917' }}>
+        <Text className="font-sans-semibold text-xs" style={{ color: '#0A1A3F' }}>
           {label}
         </Text>
       </View>
